@@ -1,0 +1,672 @@
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px 2px #fff, 0 0 20px 15px rgb(36, 181, 248);
+    }
+    to {
+        box-shadow: 0 0 0px 0px #fff, 0 0 0px 0px rgb(36, 181, 248);
+    }
+  }
+
+*{
+    margin: 0;
+}
+
+:root{
+    --lightWidth: 35px;
+    --lightHeight: 35px;
+    --lineWidth: 20px;
+    --lineHeight: 75px;
+    --lineHeight2: 55px;
+}
+
+/* Contenedor de Instrucción */
+
+.iconCont2{
+    width: 5%;
+    background-image: url(../img/iconos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: bottom;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+    z-index: 3;
+}
+.iconCont2:after{
+    content: "";
+    display:block;
+    padding-top: 100%;
+}
+
+/* Instruccion */
+
+.instruccion1, .instruccion2{
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    background-color: #545454;
+    color: white;
+    font-size: 1.1em;
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+    border-radius: 15px;
+    top: 12%;
+    z-index: 3;
+}
+/* Contenedor Alertas y Timeline */
+
+.alertGameCont{
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+/* Estados de Iconos */
+
+.standBy{
+    mix-blend-mode: luminosity;
+    opacity: .5;
+    pointer-events: none;
+    background-color: #e24e4e;
+}
+.cleared{
+    background-position: top;
+    pointer-events: none;
+    background-color: #166328;
+}
+.active2{
+    background-color: #e24e4e;
+}
+
+.current{
+
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.refreshBlock{
+    pointer-events: none;
+    opacity: .5;
+}
+
+/* Caja Alert */
+
+.alertCont{
+    width: 100% !important;
+    padding-top: 56.25% !important;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Posiciones de los iconos */
+
+#alert1{
+    position: absolute;
+    left: 59%;
+    top: 56%;
+    /*left: 698px;
+    top: 369px;*/
+}
+#alert2{
+    position: absolute;
+    left: 45%;
+    top: 36%;
+}
+#alert3{
+    position: absolute;
+    left: 49%;
+    top: 40%;
+}
+#alert4 {
+    position: absolute;
+    top: 56%;
+    left: 37%;
+}
+#alert5{
+    position: absolute;
+    top: 73%;
+    left: 49%;
+}
+#alert6{
+    position: absolute;
+    top: 53%;
+    left: 95%;
+}
+#alert6_2{
+    position: absolute;
+    top: 53%;
+    left: 90%;
+}
+#alert7{
+    position: absolute;
+    top: 85%;
+    left: 33%;
+}
+#alert8{
+    position: absolute;
+    top: 43%;
+    left: 8%;
+}
+#alert9{
+    position: absolute;
+    top: 53%;
+    left: 85%;
+}
+#alert10{
+    position: absolute;
+    top: 63%;
+    left: 95%;
+}
+#alert11{
+    position: absolute;
+    top: 64%;
+    left: 22%;
+}
+#alert12{
+    position: absolute;
+    top: 53%;
+    left: 93%;
+}
+#alert13{
+    position: absolute;
+    top: 47%;
+    left: 6%;
+}
+#alert14{
+    position: absolute;
+    top: 38%;
+    left: 6%;
+}
+#alert15{
+    position: absolute;
+    top: 53%;
+    left: 88%;
+}
+#alert16{
+    position: absolute;
+    top: 63%;
+    left: 95%;
+}
+#alert17{
+    position: absolute;
+    top: 52%;
+    left: 79%;
+}
+#alert18{
+    position: absolute;
+    top: 45%;
+    left: 72%;
+}
+#alert19{
+    position: absolute;
+    top: 53%;
+    left: 67%;
+}
+#alert20{
+    position: absolute;
+    top: 44%;
+    left: 58%;
+}
+#alert21{
+    position: absolute;
+    top: 81%;
+    left: 77%;
+}
+#alert22{
+    position: absolute;
+    top: 28%;
+    left: 75%;
+}
+#alert23{
+    position: absolute;
+    top: 44%;
+    left: 46%;
+}
+/* Contenedor del Timeline */
+
+.progressBarCont{
+    width: 3%;
+    position: absolute;
+    top: 17%;
+    left: 2%;
+}
+.progressBarCont2{
+    width: 30px;
+    position: absolute;
+    top: 15%;
+    left: 2%;
+}
+
+/* Timeline */
+
+.progressBar{
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+}
+
+/* Marcadores Bolita Timeline */
+
+.lightbg{
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, rgba(125,125,125,1) 0%, rgb(165, 165, 165) 100%);
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+/* .lightbg:after{
+    content: "";
+    display:flex;
+    padding-top: 100%;
+} */
+.bolita{
+    top: -15px;
+}
+
+/* Bolita Prendida */
+
+.light1, .light2, .light3, .light4, .light5, .light6, .light7{
+    width: 65%;
+    padding-bottom: 50%;
+    border-radius: inherit;
+    border: solid #212121 2px;
+    background: radial-gradient(circle, rgba(119,117,117,1) 0%, rgba(48,47,47,1) 75%);
+    position: relative;
+}
+/* Barra del Timeline */
+
+.chunkCont{
+    /* width: var(--lineWidth);
+    height: var(--lineHeight); */
+    width: 50%;
+    height: 50px;
+    background: linear-gradient(153deg, rgba(237,237,237,1) 0%, rgba(189,189,189,1) 75%);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.chunkCont1{
+    width: var(--lineWidth);
+    height: var(--lineHeight2);
+    background: linear-gradient(153deg, rgba(237,237,237,1) 0%, rgba(189,189,189,1) 75%);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Complemento de la barra del Timeline barras en gris */
+
+.chunk1, .chunk2, .chunk3, .chunk4, .chunk5, .chunk6, .chunk7{
+    width: 65%;
+    height: 100%;
+    background-color: #585b54;
+}
+
+/* Marcador de ultima barra de Timeline */
+
+.chunkLast{
+    background: none;
+}
+
+/* Chequeo de bolitas y barra a verde */
+
+.clearLight{
+    background: radial-gradient(circle, rgba(114,215,124,1) 0%, rgba(1,148,18,1) 75%);
+}
+.clearChunk{
+    background-color: #019412;
+}
+
+/* Contenedor de texto de apoyo */
+
+.info{
+    position: absolute;
+    z-index: 1;
+    top: -22px;
+    bottom: 0px;
+    margin: 0 auto;
+    left: 50px;
+}
+
+.tooltipCont2 {
+    top: -50px;
+}
+
+.tooltipCont5{
+    top: 30px;
+}
+
+.s6T5{
+    top: 60px !important;
+}
+
+.tooltipCont6{
+    top: -20px !important;
+}
+
+.tooltipCont3{
+    top: -60px !important;
+}
+
+.tooltipCont4{
+    top: -60px;
+}
+
+.tooltipCont7{
+    top: 65px !important;
+}
+
+.s6T4{
+    top: -140px !important;
+}
+
+.s7T7{
+    top: -25px !important;
+}
+
+.t9{
+    min-width: 150px !important;
+}
+
+.t10{
+    min-width: 140px !important;
+}
+
+/* Texto de apoyo */
+
+.tooltip{
+    min-width: 270px;
+    position: relative;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #0c2999;
+    background-color: rgba(255, 174, 0,0.8);
+    border-radius: 10px;
+}
+
+/* Triangulo de la caja de texto */
+
+.tip{
+    position: absolute;
+    background-color: rgb(255, 174, 0);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    left: -7px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: -1;
+}
+
+/* Encabezados del texto de apoyo */
+
+.hTip{
+    font-weight: bold;
+}
+
+/* Marca para esconder el texto de apoyo */
+
+.toolHide{
+    display: none;
+}
+
+/* Querys*/
+
+@media only screen and (max-width: 1440px) {
+
+    .tooltipCont4{
+        top: -80px;
+    }
+
+    .tooltipCont5{
+        top: -10px;
+    }
+
+    .tooltipCont6{
+        top: 50px !important;
+    }
+
+    .tooltipCont7 {
+        top: -5px !important;
+    }
+
+    .t9{
+        min-width: 120px !important;
+    }
+
+    .t10{
+        min-width: 210px !important;
+    }
+
+    .s6T4 {
+        top: -160px !important;
+    }
+
+    .s6T5 {
+        top: 10px !important;
+    }
+
+    .s7T7{
+        top: -25px !important;
+    }
+
+    
+}
+
+@media only screen and (max-width: 1366px) {
+
+    .tooltipCont4{
+        top: 10px;
+    }
+
+    .tooltipCont5{
+        top: -50px;
+    }
+
+    .tooltipCont6{
+        top: -5px !important;
+    }
+
+    .tooltipCont7 {
+        top: -45px !important;
+    }
+
+    .t11{
+        min-width: 150px;
+    }
+
+    .s4T2{
+        top: -65px !important;
+    }
+
+    .s5T4{
+        top: -140px !important;
+    }
+
+    .s5T6{
+        top: -280px !important;
+    }
+
+    .s6T4 {
+        top: -180px !important;
+    }
+
+    .s6T6{
+        top: -100px !important;
+    }
+    
+
+    .s7T7{
+        top: -85px !important;
+    }
+
+    .fixedPos1{
+        top: -70px !important;
+    }
+
+
+    
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .lightbg{
+        width: 25px;
+        height: 25px;
+    }
+
+    .progressBarCont2 {
+        top: 16%;
+    }
+
+    .tooltipCont4{
+        top: 30px;
+    }
+
+    .tooltipCont5{
+        top: 70px;
+    }
+
+    .tooltipCont6{
+        top: 20px !important;
+    }
+
+    .tooltipCont7 {
+        top: -30px !important;
+    }
+
+    .t9 {
+        min-width: 160px !important;
+    }
+
+    .s5T6{
+        top: -250px !important;
+    }
+
+    .s7T7{
+        top: -110px !important;
+    }
+
+    
+}
+
+@media only screen and (max-width: 823px) and (orientation:landscape){
+
+    .instruccion2{
+        margin-top: 8px;
+        width: 80%;
+        font-size: .9em;
+    }
+    .info {
+        top: -5px;
+        bottom: 0px;
+        left: 20px;
+    }
+    .tooltip {
+        min-width: 160px;
+        padding: 5px;
+        font-size: .6em;
+    }
+    .hTip>h3{
+        font-size: 10px;
+    }
+
+    .hTip p{
+        font-size: 6px;
+    }
+    .lightbg{
+        width: 15px;
+        height: 15px;
+    }
+    .light1, .light2, .light3, .light4, .light5, .light6, .light7{
+        width: 10px;
+        height: 10px;
+        padding-bottom: 0%;
+    }
+    .clearLight{
+        width: 10px;
+        height: 10px;
+    }
+    .bolita {
+        top: -5px;
+    }
+    .chunkCont, .chunkCont1 {
+        width: 10px;
+        height: 30px;
+    }
+
+    .chunk1, .chunk2, .chunk3, .chunk4, .chunk5, .chunk6, .chunk7 {
+        width: 40%;
+    }
+
+    .progressBar{
+        margin-top: -5px;
+    }
+
+    .progressBarCont {
+        top: 20%;
+    }
+    .progressBarCont2 {
+        top: 20%;
+    }
+
+    .fixedPos1{
+        top: -30px !important;
+    }
+
+    .tooltipCont4{
+        top: -35px;
+    }
+
+    .tooltipCont5{
+        top: 45px;
+    }
+
+    .tooltipCont7{
+        top: -15px !important;
+    }
+
+    .t9 {
+        min-width: 80px !important;
+    }
+
+    .t10 {
+        min-width: 120px !important;
+    }
+
+    .t11{
+        min-width: 80px !important;
+    }
+
+    .s5T4{
+        top: -55px !important;
+    }
+
+    .s6T4 {
+        top: -80px !important;
+    }
+
+    .s7T7{
+        top: -180px !important;
+    }
+
+    
+}

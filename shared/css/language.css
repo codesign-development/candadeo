@@ -1,0 +1,288 @@
+/* Slide de lenguaje */
+
+#slider-lan {
+    width: 100%;
+    height: 75%;
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#content-lan {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#content-welcome{
+    height: 100%;
+    width: 100%;
+}
+.lan-logo{
+    width: 15%;
+    display: inline-block;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 1%;
+}
+.elige-txt{
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+    font-size: 1.3em;
+}
+.lan-select{
+    width: 9%;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 2px;
+}
+.lan-select:hover{
+    border: solid rgba(255, 255, 255, 0.379) 2px;
+    background-color: rgba(59, 65, 135, .5);
+    box-sizing: border-box;
+}
+.selected-lan{
+    border: solid white 3px;
+    background-color: rgba(59, 65, 135, .5);
+}
+.lan-flag{
+    width: 25%;
+    margin: auto;
+}
+.lan-select-cont{
+    margin-bottom: 3%;
+}
+.lan-hide{
+    display: none !important;
+}
+.select-messa-cont{
+    margin-bottom: 20px;
+}
+#select-language{
+    font-size: 1.3em;
+}
+#lan-btn{
+    margin-top: 20px;
+    padding: 5px 40px;
+    background-color: #ed495e;
+    border-radius: 20px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 3px 19px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 3px 19px -2px rgba(0,0,0,0.75);
+    box-shadow: 5px 3px 19px -2px rgba(0,0,0,0.75);        
+}
+#lan-btn:hover{
+    background-color: #d20621;
+}
+.cont-hide{
+    display: none;
+}
+
+/* Slide de bienvenida y despedida */
+
+#bienvenida,
+#despedida {
+    background-image: url(../img/video/preview-intro.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.welcomeTxt {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.byeTxt {
+    padding-bottom: 10px;
+}
+
+.txt-title,
+.bye-title {
+    font-size: 3vw;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.m-top {
+    margin-top: 50px !important;
+}
+
+.m-topd {
+    margin-top: 16px !important;
+}
+
+.border-red {
+    border-bottom: solid #da243c 3px;
+}
+
+.star {
+    width: 5%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.bye-title {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 0px !important;
+}
+
+.txt-p {
+    width: 50%;
+    font-size: 1.5em;
+    font-family: 'AvenirLTStd-Light';
+    margin: 20px auto;
+
+}
+
+.txt-d {
+    width: 55%;
+    font-size: 1.5em;
+    font-family: 'AvenirLTStd-Light';
+    margin: auto;
+}
+
+.iconTitle {
+    display: block;
+}
+ 
+.iconTitle p {
+    font-size: 1.2em;
+    color: #fff;
+    font-style: italic;
+}
+
+.logo-bimbo {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.logo-bimbo img {
+    width: 15%;
+}
+
+.char {
+    position: absolute;
+}
+
+.uno {
+    bottom: -50px;
+    right: -213px;
+}
+
+.uno img {
+    width: 27%;
+}
+
+.dos {
+    bottom: -38px;
+    left: -218px;
+}
+
+.dos img {
+    width: 26%;
+}
+
+.chard {
+    position: absolute;
+}
+
+.unod {
+    bottom: -50px;
+    right: -208px;
+}
+
+.unod img {
+    width: 40%;
+}
+
+.dosd {
+    bottom: -44px;
+    left: -211px;
+}
+
+.dosd img {
+    width: 40%;
+}
+
+
+@media only screen and (max-width: 1440px){
+
+.uno {
+        bottom: -110px;
+        right: -245px;
+}
+    
+ .dos {
+        bottom: -90px;
+        left: -250px;
+}
+
+}
+
+@media only screen and (max-width:832px){
+    
+.txt-title,
+.bye-title {
+    font-size: 3.5vw;
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.txt-p {
+    width: 85%;
+    font-size: 1.8vw;
+    margin: 8px auto;
+}
+.txt-d {
+    width: 85%;
+    font-size: 3.3vw;
+}
+.elige-txt {
+    width: 80%;
+    font-size: 2vw;
+    margin-bottom: 3%;
+}
+    
+}
+
+@media only screen and (max-width: 568px){
+
+
+    .uno {
+        bottom: -20px;
+        right: -143px;
+    }
+    
+    .dos {
+        bottom: -11px;
+        left: -141px;
+    }
+
+    
+    .lan-select p{
+        font-size: 2.5vw;
+    }
+    #select-language {
+        font-size: 3vw;
+    }
+
+}
+
+@media only screen and (max-width: 320px) and (orientation:portrait){
+   
+    
+}

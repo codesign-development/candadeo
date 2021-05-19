@@ -1,0 +1,570 @@
+{
+    "Esp":{
+
+        "seleccion":{
+            "frase":"Has seleccionado el idioma español",
+            "fraseBtn":"Iniciar"
+        },
+
+        "curso":{
+            "nameCurso": "Seguridad en el Ingreso de los Transportes a Centros Productivos y Centros de Distribución"
+        },
+
+        "bienvenida":{
+            "bien1": "¡Te damos la bienvenida!",
+            "bien2": "En Grupo Bimbo tu seguridad es primero.",
+            "bien3": "En este curso te enseñaremos los lineamientos de seguridad en el ingreso de los transportes a un centro productivo o a un centro de distribución Grupo Bimbo."
+        },
+
+        "despedida":{
+            "desp1": "¡Felicidades!",
+            "desp2": "Has concluido el curso con éxito.",
+            "desp3": "Ahora podrás laborar con seguridad en tu área de trabajo.",
+            "desp4": "Para terminar el curso, cierra la ventana."
+        },
+
+        "titulos":{ 
+            "v1":"Ingreso seguro, cuidado al peatón",
+            "v2":"Acceso seguro a las instalaciones",
+            "v3":"El transportador ingresa y frena en el área delimitada",
+            "v4":"El bloqueador como clave fundamental",
+            "v5":"El transportador entrega documentos y llaves al encargado de seguridad",
+            "v6":"Entrega de llave y documentos para ascenso a la unidad",
+            "v7":"Avanzar la unidad",
+            "a12":"Actividad final"
+        },
+
+        "flechas":{
+            "flecha1": "Regresar",
+            "flecha2": "Siguiente"
+        },
+        
+        "examen":{
+            "exa1": "Elige cuál de estas escenas es la correcta.",
+            "exa2": "Da clic en la flecha derecha para continuar."
+        },
+
+        "txtTrivia":{
+            "instru":"Selecciona la acción correcta para esta situación.",
+            "btnConti":"Continuar"
+        },
+
+        "iconosTextos":{
+            "icono1": "Detener el vehículo después del paso peatonal",
+            "icono2": "Detener el vehículo antes del paso peatonal",
+            "icono3": "Detener el vehículo sobre el paso peatonal",
+            "icono4": "Esperar la indicación de ingreso por parte del encargado de seguridad",
+            "icono5": "Avanzar para no obstaculizar el cruce peatonal",
+            "icono6":"Incrementar la velocidad antes de que cierre la puerta"
+        },
+
+        "alertasTextos":{
+            "alertaInsa":"Ayuda al colaborador a realizar el procedimiento seguro de manera correcta, seleccionando las alertas encendidas.",
+            "alertaInsb":"Ayuda a los colaboradores a realizar el procedimiento seguro de manera correcta, seleccionando las alertas encendidas.",
+            "alerta1a":"Aplica el freno de estacionamiento.",
+            "alerta1b":"(Recuerda que siempre deberás hacer el frenado total de la unidad para evitar un desplazamiento no deseado).",
+            "alerta2a":"Apaga el vehículo.",
+            "alerta2b":"(De esta forma, evitas que alguien pueda mover la unidad sin autorización).",
+            "alerta3a":"Retira la llave.",
+            "alerta3b":"(Recuerda que deberás hacer la entrega de las llaves al encargado de seguridad. Esto evitará que otras personas puedan mover la unidad sin autorización).",
+            "alerta4":"El encargado de seguridad espera a que el transportador: apague la unidad, aplique el frenado de estacionamiento, descienda de la unidad y le haga entrega de las llaves.",
+            "alerta5a":"El encargado de seguridad coloca el bloqueador en la llanta delantera izquierda.",
+            "alerta5b":"El transportador no podrá subir a la unidad hasta recibir la instrucción del encargado de seguridad.",
+            "alerta6_2":"El encargado de seguridad coloca el bloqueador en la llanta delantera izquierda.",
+            "alerta6":"El transportador entrega documentos y llaves.",
+            "alerta7":"El transportador se dirige a la zona de sanitización.",
+            "alerta8":"El transportador se dirige a la zona segura.",
+            "alerta9":"El encargado de seguridad verifica los documentos.",
+            "alerta10":"El encargado de seguridad revisa la cabina en busca de objetos no autorizados.",
+            "alerta11":"El encargado de seguridad revisa los sellos.",
+            "alerta12":"El encargado de seguridad retira el bloqueador.",
+            "alerta13":"El encargado de seguridad se dirige a la zona de seguridad para encontrarse con el transportador.",
+            "alerta14":"El encargado de seguridad entrega llaves y documentos.",
+            "alerta15":"El transportador se dirige a su unidad, mientras que el encargado de seguridad permanece en la zona segura.",
+            "alerta16":"El transportador asciende a la unidad.",
+            "alerta17a":"Utiliza el cinturón de seguridad.",
+            "alerta17b":"(El uso del cinturón salvaguarda tu integridad).",
+            "alerta18a":"Espejea y asegúrate de visualizar al encargado de seguridad en la zona segura",
+            "alerta18b":"(Revisa tu entorno para detectar cualquier riesgo que pudiera existir).",
+            "alerta19a":"Baja tus ventanas.",
+            "alerta19b":"(Esto te ayuda a poder escuchar cualquier aviso de alerta en el entorno).",
+            "alerta20a":"La velocidad máxima es de 10 (km/hr).",
+            "alerta20b":"(Respeta la velocidad máxima establecida en cada ubicación de Grupo Bimbo).",
+            "alerta21":"Enciende luces e intermitentes.",
+            "alerta22a":"Enciende torretas.",
+            "alerta22b":"(Ayuda a ser más visible para posibles personas distraídas).",
+            "alerta23a":"Evita distractores como el teléfono celular.",
+            "alerta23b":"(Estar atento en todo momento evita una acción insegura)."
+        },
+
+        "super":{
+            "sup1":"Ayuda a evitar accidentes deteniendo el transporte a una distancia donde tengas visibilidad completa de las personas y te encuentres antes del paso peatonal.",
+            "sup2":"Recuerda: solo puedes ingresar al centro productivo si el encargado de seguridad te da la señal de entrada.",
+            "sup3":"Al descender del vehículo recuerda siempre: poner el freno de estacionamiento; apagar el vehículo; retirar llaves y papeles; descender usando la técnica de tres puntos de apoyo; ir a zona de sanitización; y, por último, dirigirte a la zona segura.",
+            "sup4":"Cumplir con las medidas de seguridad y colocar el bloqueador te ayudará a evitar situaciones inseguras.",
+            "supspe":"Se debe reportar al encargado de seguridad si se encuentra algo extraño.",
+            "sup5":"Tener conocimiento de todas las medidas de seguridad en el ingreso de los transportes garantiza tu seguridad y la de las personas a tu alrededor.",
+            "sup6":"Al hacer la entrega para ir a desarmar, asegúrate (antes de iniciar el movimiento del vehículo) de que el encargado de seguridad se encuentre en la zona segura. No olvides ascender aplicando la técnica de los tres puntos de apoyo.",
+            "sup7a":"Antes de iniciar el movimiento:",
+            "sup7b":"Confirma que tu entorno es seguro, tanto frontal como lateral.",
+            "sup7c":"Apóyate en tus espejos retrovisores para visualizar al encargado de seguridad en la zona segura y para asegurarte de que no existan otros riesgos.",
+            "sup7d":"Enciende tus intermitentes y torretas para hacerte visible."
+        }
+
+        
+    },
+
+    "Eng":{
+
+        "seleccion":{
+            "frase":"English has been selected",
+            "fraseBtn":"Start"
+        },
+
+        "curso":{
+            "nameCurso": "Safe locking of trailer trucks"
+        },
+
+        "bienvenida":{
+            "bien1": "Welcome!",
+            "bien2": "In Grupo Bimbo your safety is paramount.",
+            "bien3": "With this course, we will show you the safety guidelines to be followed when entering either a Grupo Bimbo production or distribution center."
+        },
+
+        "despedida":{
+            "desp1": "Congratulations!",
+            "desp2": "You have successfully completed the course.",
+            "desp3": "You can now work safely in your workplace.",
+            "desp4": "To finish the course, close the window."
+        },
+
+        "titulos":{ 
+            "v1":"Stopping in the right place",
+            "v2":"Waiting for directions to enter",
+            "v3":"Operator enters and brakes in the delimited area",
+            "v4":"The wheel lock as a fundamental key",
+            "v5":"Operator hands out documents",
+            "v6":"Delivery to dismantle",
+            "v7":"Put on your seatbelt",
+            "a12":"Final activity"
+        },
+
+        "flechas":{
+            "flecha1": "Back",
+            "flecha2": "Next"
+        },
+        
+        "examen":{
+            "exa1": "Choose the correct scene.",
+            "exa2": "Click on the right arrow to continue."
+        },
+
+        "txtTrivia":{
+            "instru":"Select the answer that indicates the wrong operation performed.",
+            "btnConti":"Continue"
+        },
+
+        "iconosTextos":{
+            "icono1": "Going at inappropriate speed",
+            "icono2": "Stopping the vehicle after the white line",
+            "icono3": "The safety manager did not open the door",
+            "icono4": "Parking in the pedestrian crossing",
+            "icono5": "Entering the vehicle without the safety manager's authorization"
+        },
+
+        "alertasTextos":{
+            "alertaInsa":"Help the worker to perform correctly the safe procedure by selecting the alerts that are on.",
+            "alertaInsb":"Help the workers to perform correctly the safe procedure by selecting the alerts that are on.",
+            "alerta1a":"Set the parking brake",
+            "alerta1b":"(Remember that you should always fully stop the unit to prevent unwanted movement).",
+            "alerta2a":"Turn off the vehicle.",
+            "alerta2b":"(This will prevent the unit from being moved by an unauthorized person).",
+            "alerta3a":"Get the key out.",
+            "alerta3b":"(By giving the keys to the safety manager, you prevent other people from moving the unit without authorization).",
+            "alerta4":"Wait until the vehicle is turned off and the operator gets off.",
+            "alerta5a":"Place the wheel lock on the left front wheel.",
+            "alerta5b":"This action helps to avoid risky situations since the operator will only be able to move the vehicle forward if the wheel lock is removed.",
+            "alerta6":"The operator hands out documents and keys.",
+            "alerta7":"The operator goes to the sanitization area.",
+            "alerta8":"The operator goes to the safe zone.",
+            "alerta9":"The safety manager verifies the documents.",
+            "alerta10":"The safety manager checks the cabin and finds some sort of red box with a danger sign on it.",
+            "alerta11":"The safety manager checks the seals.",
+            "alerta12":"The safety manager removes the wheel lock.",
+            "alerta13":"The safety manager goes to the safe zone to meet the operator.",
+            "alerta14":"The safety manager hands out keys and documents.",
+            "alerta15":"While the operator goes to his unit, the safety manager remains in the safe zone.",
+            "alerta16":"The operator gets in.",
+            "alerta17a":"Put on your seatbelt.",
+            "alerta17b":"(Using the seatbelt will safeguard your integrity).",
+            "alerta18a":"Check your mirrors.",
+            "alerta18b":"(Check your environment for any risks that may exist).",
+            "alerta19a":"Lower your windows.",
+            "alerta19b":"(This will help you hear any warning signs in the environment).",
+            "alerta20a":"The maximum speed is 6 (mph).",
+            "alerta20b":"(Please respect the maximum speed set at each Grupo Bimbo location).",
+            "alerta21":"Turn on lights and blinkers.",
+            "alerta22a":"Turn on your turrets.",
+            "alerta22b":"(This helps to be more visible to possibly distracted people).",
+            "alerta23a":"Avoid any distraction, such as cellphones.",
+            "alerta23b":"(Staying alert at all times will avoid risky situations)."
+        },
+
+        "super":{
+            "sup1":"Waiting before the white line expands your range of vision, thus avoiding accidents.",
+            "sup2":"Remember: you may only enter the production/distribution center if the safety manager gives you the signal to do so.",
+            "sup3":"When getting out of the vehicle, always remember to: set the parking brake, turn off the vehicle, take keys and papers out, get out using the three-point support technique, go to the sanitation area, and finally, go to the safe area.",
+            "sup4":"Following the safety measures and placing the wheel lock will help you avoid unsafe situations.",
+            "supspe":"Report to the safety manager if anything unusual is found.",
+            "sup5":"Having knowledge of the entire delivery process after the arrival of a vehicle guarantees more safety for you and everyone around you.",
+            "sup6":"When making the delivery to dismantle, make sure (before moving the vehicle) that the security manager is in the safe zone.",
+            "sup7a":"Before moving:",
+            "sup7b":"Make sure that both your frontal and lateral environments are safe.",
+            "sup7c":"Lean on your rear-view mirrors to ensure that there are no risks.",
+            "sup7d":"Turn on your blinkers and turrets to make yourself visible."
+        }
+
+        
+    },
+
+    
+    "Fra":{
+
+        "seleccion":{
+            "frase":"Vous avez sélectionné la langue française",
+            "fraseBtn":"Commencer"
+        },
+
+        "curso":{
+            "nameCurso": "Verrouillage sécurisé des tracteurs semi-remorques"
+        },
+
+        "bienvenida":{
+            "bien1": "Bienvenu !",
+            "bien2": "Chez Grupo Bimbo, votre sécurité est primordiale.",
+            "bien3": "Avec ce cours, nous vous montrerons les consignes de sécurité lors de l'accès à un centre de production ou de distribution Grupo Bimbo."
+        },
+
+        "despedida":{
+            "desp1": "Bravo !",
+            "desp2": "Vous avez complété le cours avec succès.",
+            "desp3": "Maintenant, vous pouvez oeuvrer en toute sécurité dans votre zone de travail.",
+            "desp4": "Pour terminer le cours, fermez la fenêtre."
+        },
+
+        "titulos":{ 
+            "v1":"S'arrêter au bon endroit",
+            "v2":"Attendre les directions pour entrer",
+            "v3":"L'opérateur entre et freine dans la zone délimitée",
+            "v4":"Le blocage de roue comme clé fondamentale",
+            "v5":"L'opérateur délivre les documents",
+            "v6":"Livraison pour le démontage",
+            "v7":"Utilisez la ceinture de sécurité",
+            "a12":"Dernière activité"
+        },
+
+        "flechas":{
+            "flecha1": "Précédent",
+            "flecha2": "Suivant"
+        },
+        
+        "examen":{
+            "exa1": "Choisissez laquelle de ces scènes est correcte.",
+            "exa2": "Cliquez sur la flèche droite pour continuer."
+        },
+
+        "txtTrivia":{
+            "instru":"Sélectionnez la réponse pour la mauvaise action effectuée.",
+            "btnConti":"Continuer"
+        },
+
+        "iconosTextos":{
+            "icono1": "Aller à une vitesse inappropriée",
+            "icono2": "Arrêter le véhicule après la ligne blanche",
+            "icono3": "Le responsable de sécurité n'a pas ouvert la porte",
+            "icono4": "Se garer dans le passage pour piétons",
+            "icono5": "Entrer dans le véhicule sans l'autorisation du responsable de sécurité"
+        },
+
+        "alertasTextos":{
+            "alertaIns":"Aidez le collègue à exécuter correctement la procédure de sécurité en sélectionnant les alertes qui sont activées.",
+            "alerta1a":"Engagez le frein de stationnement.",
+            "alerta1b":"(N'oubliez pas que vous devez toujours freiner complètement l'unité afin d'éviter tout mouvement indésirable).",
+            "alerta2a":"Éteignez le véhicule.",
+            "alerta2b":"(Cela empêche l'unité d'être déplacée par des personnes non autorisées).",
+            "alerta3a":"Rétirez la clé.",
+            "alerta3b":"(En remettant les clés au responsable de sécurité, vous empêchez d'autres personnes de déplacer l'unité sans autorisation).",
+            "alerta4":"Attendez que le véhicule soit arrêté et que l'opérateur descende.",
+            "alerta5a":"Placez le blocage sur la roue avant gauche.",
+            "alerta5b":"Cette action permet d'éviter les situations dangereuses car l'opérateur ne pourra avancer que si le blocage est retiré.",
+            "alerta6":"L'opérateur délivre les documents et les clés.",
+            "alerta7":"L'opérateur se rend dans la zone de désinfection.",
+            "alerta8":"L'opérateur se dirige vers la zone de sécurité.",
+            "alerta9":"Le responsable de sécurité vérifie les documents.",
+            "alerta10":"Le responsable de sécurité vérifie la cabine et trouve une sorte de boîte rouge avec un signe de danger.",
+            "alerta11":"Le responsable de sécurité vérifie les scellés.",
+            "alerta12":"Le responsable de sécurité retire le blocage de roue.",
+            "alerta13":"Le responsable de sécurité se rend dans la zone de sécurité pour rencontrer l'opérateur.",
+            "alerta14":"The safety manager hands out keys and documents.",
+            "alerta15":"L'opérateur se rend à son unité, tandis que le responsable de sécurité reste dans la zone de sécurité.",
+            "alerta16":"L'operateur monte.",
+            "alerta17a":"Utilisez la ceinture de sécurité",
+            "alerta17b":"(Le port de la ceinture de sécurité préserve votre intégrité).",
+            "alerta18a":"Vérifiez vos miroirs",
+            "alerta18b":"(Passez en revue votre environnement pour détecter les risques qui peuvent exister).",
+            "alerta19a":"Baissez vos vitres.",
+            "alerta19b":"(Cela vous aide à être en mesure d'entendre tout avertissement dans l'environnement).",
+            "alerta20a":"La vitesse maximale est de 10 km/hr (6,2 mi/hr).",
+            "alerta20b":"(Veuillez respecter la vitesse maximale établie dans chaque emplacement du Grupo Bimbo).",
+            "alerta21":"Allumez les lumières et les clignotants.",
+            "alerta22a":"Allumez vos tourelles.",
+            "alerta22b":"(Cela permet d'être plus visible pour les personnes possiblement distraites).",
+            "alerta23a":"Éviter les distracteurs tels que les téléphones portables.",
+            "alerta23b":"(Rester attentif à tout moment permet d'éviter une action dangereuse)."
+        },
+
+        "super":{
+            "sup1":"Attendre avant la ligne blanche élargit votre champ de vision, ce qui permet d'éviter les accidents.",
+            "sup2":"N'oubliez pas : vous ne pouvez entrer dans le centre de production ou de distribution que si le responsable de sécurité vous en donne le signal.",
+            "sup3":"Lorsque vous sortez du véhicule, n'oubliez jamais de : mettre le frein de stationnement ; éteindre le véhicule ; retirer les clés et les papiers ; sortir en utilisant la technique des trois points ; aller dans la zone sanitaire ; et enfin, aller dans la zone sécurisée.",
+            "sup4":"Le respect des mesures de sécurité et le placement du blocage vous aideront à éviter les situations à risque.",
+            "supspe":"Si vous trouvez quelque chose d'étrange, vous devez le signaler au responsable de sécurité.",
+            "sup5":"La connaissance de l'ensemble du processus de livraison après l'arrivée d'un véhicule garantit plus de sécurité pour vous et pour tous ceux qui vous entourent.",
+            "sup6":"Lorsque vous effectuez la livraison pour le démontage, assurez-vous (avant de commencer à déplacer le véhicule) que le responsable de sécurité se trouve dans la zone de sécurité.",
+            "sup7a":"Avant de commencer le mouvement :",
+            "sup7b":"Assurez-vous que vos environnements frontal et latéral sont sûrs.",
+            "sup7c":"Appuyez-vous sur vos rétroviseurs pour vous assurer qu'il n'y a aucun risque.",
+            "sup7d":"Allumez vos clignotants et tourelles pour vous rendre visible."
+        }
+
+        
+    },
+
+    "Por":{
+
+        "seleccion":{
+            "frase":"Você selecionou o idioma português",
+            "fraseBtn":"Iniciar"
+        },
+
+        "curso":{
+            "nameCurso": "Bloqueio seguro em caminhões"
+        },
+
+        "bienvenida":{
+            "bien1": "Seja bem-vindo!",
+            "bien2": "Para o Grupo Bimbo a sua segurança vem em primeiro lugar.",
+            "bien3": "Neste curso, ensinaremos as diretrizes de segurança ao acessar um centro de produção ou centro de distribuição do Grupo Bimbo."
+        },
+
+        "despedida":{
+            "desp1": "Parabéns!",
+            "desp2": "Você concluiu o curso com sucesso.",
+            "desp3": "Agora você poderá trabalhar com segurança em sua área de trabalho.",
+            "desp4": "Para terminar o curso, feche a janela."
+        },
+
+        "titulos":{ 
+            "v1":"Parar no lugar certo",
+            "v2":"Esperar indicações para entrar",
+            "v3":"O operador entra e freia na área delimitada",
+            "v4":"O trava roda como elemento fundamental",
+            "v5":"O operador deve entregar os documentos",
+            "v6":"Entregue para ir desarmar",
+            "v7":"Use o cinto de segurança",
+            "a12":"Atividade final"
+        },
+
+        "flechas":{
+            "flecha1": "Voltar",
+            "flecha2": "Próximo"
+        },
+        
+        "examen":{
+            "exa1": "Escolha qual destas cenas é a correcta.",
+            "exa2": "Clique na seta para a direita para continuar."
+        },
+
+        "txtTrivia":{
+            "instru":"Selecione a resposta para a ação realizada incorretamente.",
+            "btnConti":"Continuar"
+        },
+
+        "iconosTextos":{
+            "icono1": "Ir a uma velocidade inadequada",
+            "icono2": "Parar o veículo depois da linha branca",
+            "icono3": "O encarregado da segurança não abriu a porta",
+            "icono4": "Estacionar na faixa de pedestres",
+            "icono5": "Entrar no veículo sem a autorização do encarregado de segurança"
+        },
+
+        "alertasTextos":{
+            "alertaIns":"Ajude o colaborador a realizar o procedimento seguro de forma correta, selecionando os alarmes ativados.",
+            "alerta1a":"Aplique o freio de mão",
+            "alerta1b":"(Lembre-se que você deve sempre freiar totalmente o veículo para evitar um movimento indesejado).",
+            "alerta2a":"Desligue o veículo.",
+            "alerta2b":"(Desse jeito, você evitará que alguém mova a unidade sem autorização).",
+            "alerta3a":"Retire a chave.",
+            "alerta3b":"(Ao entregar as chaves ao encarregado de segurança, você evitará que outras pessoas movam a unidade sem autorização).",
+            "alerta4":"Espere o veículo desligar e o operador descer.",
+            "alerta5a":"Coloque o trava roda no pneu dianteiro esquerdo.",
+            "alerta5b":"Isso nos ajuda a evitar ações inseguras, pois o operador só pode avançar se o bloqueio for removido.",
+            "alerta6":"O operador deve entregar documentos e chaves.",
+            "alerta7":"O operador segue para a área de desinfecção e sanitização.",
+            "alerta8":"O operador segue para a zona segura.",
+            "alerta9":"O encarregado de segurança verifica os documentos.",
+            "alerta10":"O encarregado de segurança verifica a cabine e encontra uma espécie de caixa vermelha com um sinal de perigo.",
+            "alerta11":"O encarregado de segurança verifica os selos.",
+            "alerta12":"O encarregado de segurança remove o trava roda.",
+            "alerta13":"O encarregado de segurança vai para a zona de segurança para encontrar o operador.",
+            "alerta14":"O encarregado de segurança entrega chaves e documentos.",
+            "alerta15":"O operador vai para sua unidade, enquanto o encarregado de segurança permanece na área segura.",
+            "alerta16":"O operador sobe.",
+            "alerta17a":"Use o cinto de segurança.",
+            "alerta17b":"(O uso do cinto garante sua integridade).",
+            "alerta18a":"Olhe pelos espelhos.",
+            "alerta18b":"(Verifique ao redor para detectar quaisquer riscos que possam existir).",
+            "alerta19a":"Abaixe os vidros, deixe as janelas abertas.",
+            "alerta19b":"(Isso ajudará você a ouvir quaisquer avisos de alerta ao seu redor).",
+            "alerta20a":"A velocidade máxima é de 10 km/h (6,2 mi/h).",
+            "alerta20b":"(Respeite a velocidade máxima estabelecida em cada local do Grupo Bimbo).",
+            "alerta21":"Acenda os faróis e o pisca-alerta.",
+            "alerta22a":"Ligue as sirenes.",
+            "alerta22b":"(Busque estar mais visível para possíveis pessoas distraídas).",
+            "alerta23a":"Evite distrações, como o telefone celular, por exemplo.",
+            "alerta23b":"(Estar sempre vigilante evita ações perigosas)."
+        },
+
+        "super":{
+            "sup1":"Esperar antes da linha branca expande seu campo de visão, o que evita acidentes.",
+            "sup2":"Lembre-se: você só poderá entrar no centro de produção/distribuição se o encarregado de segurança der a autorização.",
+            "sup3":"Ao sair do veículo, lembre-se sempre: puxe o freio de mão; desligue o veículo; remova chaves e papéis; desça usando a técnica dos três pontos de apoio; vá à área de sanitização; e, finalmente, vá para a zona segura.",
+            "sup4":"Cumprir as medidas de segurança e colocar o trava roda irá ajudá-lo a evitar situações perigosas.",
+            "supspe":"Informe ao encarregado de segurança se algo incomum for observado.",
+            "sup5":"Ter conhecimento de todo o processo de entrega após a chegada de um veículo garante mais segurança para você e para todos ao seu redor.",
+            "sup6":"Ao fazer a entrega para ir desarmar, certifique-se (antes de mover o veículo) que o encarregado de segurança está na zona segura.",
+            "sup7a":"Antes de iniciar o movimento:",
+            "sup7b":"Verfique se o local é seguro, tanto à frente como lateralmente.",
+            "sup7c":"Use os espelhos retrovisores para se certificar de que não há perigos.",
+            "sup7d":"Ligue pisca-alerta e sirenes para estar mais visível."
+        }
+
+        
+    },
+
+    "Chi":{
+
+        "seleccion":{
+            "frase":"您選擇了中文",
+            "fraseBtn":"明白了"
+        },
+
+        "curso":{
+            "nameCurso": "运输工具进入生产中心、配送中心的安全程序"
+        },
+
+        "bienvenida":{
+            "bien1": "我们欢迎您!",
+            "bien2": "在宾堡集团(Grupo Bimbo)安全至上。",
+            "bien3": "本课程中，我们将教您进入宾堡集团（Grupo Bimbo）生产中心、配送中心的安全准则。"
+        },
+
+        "despedida":{
+            "desp1": "恭喜您！",
+            "desp2": "你已经成功地完成课程。",
+            "desp3": "现在可以在您的工作区安全地工作。",
+            "desp4": "完成后，请关闭窗口。"
+        },
+
+        "titulos":{ 
+            "v1":"安全进场，当心行人",
+            "v2":"安全地进入生产中心、配送中心",
+            "v3":"运输员进入并在划定区域内刹车",
+            "v4":"车轮锁作为颇有关键性的部分",
+            "v5":"运输员将文件与钥匙交给安全员",
+            "v6":"提交文件与钥匙后，运输员上车。",
+            "v7":"使车辆前进",
+            "a12":"最终活动"
+        },
+
+        "flechas":{
+            "flecha1": "上一步",
+            "flecha2": "下一步"
+        },
+        
+        "examen":{
+            "exa1": "请选择以下场景中哪一幅是正确的。",
+            "exa2": "点击右箭头并继续。"
+        },
+
+        "txtTrivia":{
+            "instru":"请选择本情况下正确的行动",
+            "btnConti":"继续"
+        },
+
+        "iconosTextos":{
+            "icono1": "在人行横道后停车",
+            "icono2": "在人行横道前停车",
+            "icono3": "在人行横道上停车",
+            "icono4": "等待安全员的进场指示",
+            "icono5": "向前移动，以免妨碍行人正常通行",
+            "icono6":"在门关上之前加速"
+        },
+
+        "alertasTextos":{
+            "alertaInsa":"为了帮助合作员正确地执行安全程序，选择开启的警报。",
+            "alertaInsb":"为了帮助合作员们正确地执行安全程序，选择开启的警报。",
+            "alerta1a":"施加驻车制动器",
+            "alerta1b":"(切记,每次一定要完全刹车,以免发生不必要的位移)。",
+            "alerta2a":"关闭车辆发动机",
+            "alerta2b":"(这样您能防止他人擅自移动车辆。)",
+            "alerta3a":"拔出车辆钥匙",
+            "alerta3b":"（请记住将钥匙交给安全员，以防他人擅自移动车辆。）",
+            "alerta4":"安全员等待运输员执行以下行动：关闭车辆，施加驻车制动器，下车并交出钥匙。",
+            "alerta5a":"安全员将车轮锁放在左前轮胎上。",
+            "alerta5b":"只在收到安全员指示后，运输员才能登车。",
+            "alerta6":"运输员将文件与钥匙交给安全员。",
+            "alerta7":"运输员前往卫生区。",
+            "alerta8":"运输员前往安全区。",
+            "alerta9":"安全员检查文件。",
+            "alerta10":"安全员检查机舱，以确定是否有未经授权物品",
+            "alerta11":"安全员检查封条。",
+            "alerta12":"安全员移开车轮锁。",
+            "alerta13":"安全员前往安全区，跟运输员见面。",
+            "alerta14":"安全员交出钥匙与文件。",
+            "alerta15":"运输员前往车辆时，安全员留在安全区内。",
+            "alerta16":"运输员上车。",
+            "alerta17a":"请使用安全带",
+            "alerta17b":"(安全带的使用保障人身安全。)",
+            "alerta18a":"请使用后视镜，并确保安全员站在安全区内。",
+            "alerta18b":"(请检查您的环境,以探测任何风险的存在)。",
+            "alerta19a":"请摇下窗户",
+            "alerta19b":"(这有助于您能听到环境中的任何警告提示)。",
+            "alerta20a":"最高时速为 10 公里/小时(6.2 英里/小时)。",
+            "alerta20b":"(请遵守宾堡集团(Grupo Bimbo)任何区域的最高车速限制)。",
+            "alerta21":"请打开灯光与转向信号灯。",
+            "alerta22a":"请打开塔式报警灯。",
+            "alerta22b":"(这有助于让分心者更容易看到您)。",
+            "alerta23a":"避免使用手机等分散注意力设备。",
+            "alerta23b":"(时刻保持警惕,以免不安全行动)。"
+        },
+
+        "super":{
+            "sup1":"将运输工具停在完全能看到行人的距离中，并停在人行横道前，有助于事故预防。",
+            "sup2":"请记住：只在安全员给您进入指示后，才能进入生产中心、配送中心。",
+            "sup3":"下车时,切记: 踩下驻车制动器;关闭车辆发动机;取出钥匙与文件;使用三点支撑法下车;前往卫生区;最后,前往安全区。",
+            "sup4":"遵守安全准则并放上锁轮,以免不安全情况。",
+            "supspe":"如果发现异常情况,请向安全员报告。",
+            "sup5":"对于运输工具进场的一切安全措施有把握，可以保证您与周围人的安全。",
+            "sup6":"当您进行提交并去拆卸时，在起动车辆前，请确保安全员站在安全区内。请记住，用三点支撑法上车。",
+            "sup7a":"在起动车辆前请注意:",
+            "sup7b":"确认自己的正面、侧面环境是否都安全。",
+            "sup7c":"请依靠后视镜，看清安全员站在安全区内，确保未有其他危险。",
+            "sup7d":"打开您的转向信号灯与塔式报警灯,使自己车辆更加显眼。"
+        }
+
+        
+    }
+
+
+}

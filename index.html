@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="es-MX en-US fr-FR pt-BR zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="./shared/css/language.css">
+    <link rel="stylesheet" href="./shared/css/main.css">
+    <link rel="stylesheet" href="shared/css/main2.css">
+    <title>GB University</title>
+</head>
+<body>
+
+    <!-- Container General -->
+    <div id="wrapper">
+
+        <!-- Título app -->
+        <div id="title">
+
+            <div id="textTitle"></div>
+        </div>
+        <!-- Inicia bullets indicadores índice / solo slides eLearning -->
+        <div id="point-ind">
+            <div id="point-cont" class="invisible">
+                <div id="point">
+                    <div class="point hidden"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point hidden"></div>
+                    <div class="point hidden"></div>
+                    <div class="point hidden"></div>
+                    <div class="point hidden"></div>
+                    <div class="point hidden"></div>
+                    <div class="point hidden"></div>
+                    <div class="point hidden"></div>
+                    <div class="point hidden"></div>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <!-- Divs de Audios -->
+        <audio src="./shared/soundfx/triviaStart.mp3" preload="auto" class="playerAudio" id="audioTrivia"></audio>
+        <audio src="./shared/soundfx/good.mp3" preload="auto" class="playerAudio" id="audioGood"></audio>
+        <audio src="./shared/soundfx/bad.mp3" preload="auto" class="playerAudio" id="audioBad"></audio>
+        <!-- Termina bullets indicadores de navegación -->
+        <!-- Inicia slide General -->
+        <div id="slider">
+            <!-- left arroww nav -->
+            <div class="noVes" id="izqArrow" onclick="scrollToPrevItem(this)">
+                <img src="./shared/img/flechaIzq.svg" alt="">
+            </div>
+            <div id="content">
+                <!-- Inicia slides eLearning -->
+                <!-- Slide Bienvenida -->
+                <div class="child" id="bienvenida">
+                    <div class="cont-wrap">
+                        <div id="content-lan">
+                            <div class="lan-logo">
+                                <img src="shared/img/bimbo-white.svg" alt="">
+                            </div>
+                            <div class="elige-txt">
+                                <p>
+                                    Elige el idioma en el que realizarás el curso
+                                </p>
+                            </div>
+                            <div class="lan-select-cont animate__animated animate__fadeInUp">
+                                <div id="spa" class="lan-select">
+                                    <div class="lan-flag">
+                                        <img src="shared/img/mexico-flag.svg" alt="">
+                                    </div>
+                                    <div class="lan-country">
+                                        <p>
+                                            Español
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="en" class="lan-select">
+                                    <div class="lan-flag">
+                                        <img src="shared/img/usa-flag.svg" alt="">
+                                    </div>
+                                    <div class="lan-country">
+                                        <p>
+                                            English
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="fr" class="lan-select">
+                                    <div class="lan-flag">
+                                        <img src="shared/img/france-flag.svg" alt="">
+                                    </div>
+                                    <div class="lan-country">
+                                        <p>
+                                            Français
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="por" class="lan-select">
+                                    <div class="lan-flag">
+                                        <img src="shared/img/brazil-flag.svg" alt="">
+                                    </div>
+                                    <div class="lan-country">
+                                        <p>
+                                            Português
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="ch" class="lan-select">
+                                    <div class="lan-flag">
+                                        <img src="shared/img/china-flag.svg" alt="">
+                                    </div>
+                                    <div class="lan-country">
+                                        <p>
+                                            中文
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="selectMessa-cont">
+                                <div id="select-language" class="selected lan-hide"></div>
+                                <div id="lan-btn" class="selected lan-hide"></div>
+                            </div>
+                        </div>
+                        <div id="content-welcome" class="cont-hide">
+                            <div id="welcomeTxt" class="welcomeTxt">
+                                </p>
+                                <div class="logo-bimbo"><img src="shared/img/bimbo.svg" alt=""></div>
+                            </div>
+                            <div class="char uno"><img src="shared/img/worker01.png" alt=""></div>
+                            <div class="char dos"><img src="shared/img/worker02.png" alt=""></div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- Slide video 1 -->
+                <div class="child noVisto" id="video-cont">
+                    <div id="videoTitle" class="videoTitle"></div>
+                    <img src="shared/img/play-btn.svg" class="play-btn" alt="" onclick="playBtn(this)">
+                    <!-- Container video 1 -->
+                    <div id="video_one" class="player">
+                            <video preload="auto" poster="./shared/img/video/preview1.jpg">
+                            <source src="shared/video/Video01-web.mp4" type="video/mp4">
+                            <!-- fallback content here -->
+                        </video>
+                    </div>
+                    <!-- Reset bottom -->
+                    <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
+                    <div class="trivia d-none">
+                        <div class="instrucciones">
+                            <div class="txt-inst">
+                                <p>Selecciona la respuesta de la acción incorrecta realizada.</p>
+                            </div>
+                        </div>
+                        <div class="iconCont" id="iconCont1">
+                            <div class="icon bad" onclick="bad()">
+                                <div class="imgIcon badIcon" id="icon1">
+                                    <img src="./shared/img/iconsTrivia/desp-cebra-peaton.svg">
+                                </div>
+                                <div class="txtIcon badIcon txtIcon1">
+                                    
+                                </div>
+                            </div> 
+                            <div class="icon good" onclick="good()">
+                                <div class="imgIcon goodIcon" id="icon2">
+                                    <img src="./shared/img/iconsTrivia/cebra-peaton.svg">
+                                </div>
+                                <div class="txtIcon goodIcon txtIcon2">
+                                    
+                                </div>
+                            </div>    
+                            <div class="icon bad" onclick="bad()">
+                                <div class="imgIcon badIcon" id="icon3">
+                                    <img src="./shared/img/iconsTrivia/sobre-cebra-peaton.svg">
+                                </div>
+                                <div class="txtIcon badIcon txtIcon3">
+                                    
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="btn-next d-none" data-seek="20" onclick="continueVideo(this)">
+                        <p>Continuar</p>
+                    </div>
+                    <div id="superVideo1" class="superVideo"></div>
+                    <div class="vidSig">
+                        <div class="sig"></div>
+                    </div>
+                </div>
+                <!-- Slide video 2 -->
+                <div class="child noVisto" id="video-cont-2">
+                    <div id="vTitle2" class="videoTitle"></div>
+                    <img src="shared/img/play-btn.svg" class="play-btn" alt="" onclick="playBtn(this)">
+                    <!-- Container video 1 -->
+                    <div id="video_two" class="player">
+                        <video preload="none" poster="./shared/img/video/preview2.jpg">
+                        <source src="shared/video/Video02-web.mp4" type="video/mp4">
+                            <!-- fallback content here -->
+                        </video>
+                    </div>
+                    <!-- Reset bottom -->
+                    <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
+                    <div class="trivia d-none">
+                        <div class="instrucciones">
+                            <div class="txt-inst">
+                                <p>Selecciona la respuesta de la acción incorrecta realizada.</p>
+                            </div>
+                        </div>
+                        <div class="iconCont" id="iconCont2">
+                            <div class="icon good" onclick="good()">
+                                <div class="imgIcon goodIcon" id="icon4">
+                                    <img src="./shared/img/iconsTrivia/senal.svg">
+                                </div>
+                                <div class="txtIcon goodIcon txtIcon4">
+                                    
+                                </div>
+                            </div> 
+                            <div class="icon bad" onclick="bad()">
+                                <div class="imgIcon badIcon" id="icon5">
+                                    <img src="./shared/img/iconsTrivia/avanzar.svg">
+                                </div>
+                                <div class="txtIcon badIcon txtIcon5">
+                                    
+                                </div>
+                            </div>    
+                            <div class="icon bad" onclick="bad()">
+                                <div class="imgIcon badIcon" id="icon6">
+                                    <img src="./shared/img/iconsTrivia/aumento.svg">
+                                </div>
+                                <div class="txtIcon badIcon txtIcon6">
+                                    
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="btn-next d-none" data-seek="20" onclick="continueVideo(this)">
+                        <p>Continuar</p>
+                    </div>
+                    <div id="superVideo2" class="superVideo"></div>
+                    <div class="vidSig">
+                        <div class="sig">
+                        </div>
+                    </div> 
+                </div>
+                <!-- Slide video 3 -->
+                <div class="child noVisto" id="video-cont-3">
+                    <div id="vTitle3" class="videoTitle"></div>
+                    <img src="shared/img/play-btn.svg" class="play-btn" alt="" onclick="playBtn(this)">
+                    <!-- Container video 3 -->
+                    <div id="video_three" class="player">
+                        <video preload="none" poster="./shared/img/video/preview3.jpg">
+                            <source src="shared/video/Video03-web.mp4" type="video/mp4">
+                            <!-- fallback content here -->
+                        </video>
+                    </div>
+                    <!-- Reset bottom -->
+                    <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
+                    <div class="instruccion instruccion1 d-none">
+                        <!-- <p>Ayuda al colaborador a realizar el procedimiento seguro correcto, seleccionando las alertas encendidas.</p> -->
+                    </div>
+                    <div class="alertGameCont d-none">
+                        <div class="progressBarCont">
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light1">
+                                        <div class="tooltipCont1 info toolHide">
+                                            <div class="tooltip t1">
+                                               
+                                               <span class="hTip"><h3>Aplica el freno de estacionamiento.</h3></span>
+                                               <p>(Recuerda que siempre deberás hacer el frenado total de la unidad para evitar un desplazamiento no deseado).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk1"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                            <div class="lightbg bolita">
+                                <div class="light2">
+                                    <div class="tooltipCont2 info toolHide">
+                                        <div class="tooltip t2">
+                                            
+                                            <span class="hTip"><h3>Apaga el vehículo.</h3></span>
+                                               <p>(De esta forma, evitas que alguien pueda mover la unidad sin autorización).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chunkCont">
+                                <div class="chunk2"></div>
+                            </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light3">
+                                        <div class="tooltipCont3 info toolHide">
+                                            <div class="tooltip t3">
+                                                
+                                                <span class="hTip"><h3>Retira la llave.</h3></span>
+                                                <p>(Al entregar las llaves al encargado de seguridad, evitas que otras personas puedan mover la unidad sin autorización).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont chunkLast">
+                                    <div class="chunk3 chunkLast"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alertCont">
+                            <div id="alert1" class="iconCont2 long active2 current firstCheck"></div>
+                            <div id="alert2" class="iconCont2 short standBy"></div>
+                            <div id="alert3" class="iconCont2 long standBy lastCheck"></div> 
+                        </div>
+                    </div>
+                    <div class="btn-next d-none" data-seek="22" onclick="continueVideo(this)">
+                        <p>Continuar</p>
+                    </div>
+                    <div id="superVideo3" class="superVideo"></div>
+                    <div class="vidSig">
+                        <div class="sig">
+                            <p class="reg"><i>Regresar</i></p>
+                            <p class="cont"><i>Siguiente</i></p>
+                        </div>
+                    </div> 
+                </div>
+                <!-- Slide video 4 -->
+                <div class="child noVisto" id="video-cont-4">
+                    <div id="vTitle4" class="videoTitle"></div>
+                    <img src="shared/img/play-btn.svg" class="play-btn" alt="" onclick="playBtn(this)">
+                    <!-- Container video 4 -->
+                    <div id="video_four" class="player">
+                        <video preload="none" poster="./shared/img/video/preview4.jpg">
+                            <source src="shared/video/Video04-web.mp4" type="video/mp4">
+                            <!-- fallback content here -->
+                        </video>
+                    </div>
+                    <!-- Reset bottom -->
+                    <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
+                    <div class="instruccion2 d-none">
+                        <!-- <p>Ayuda al colaborador a realizar el procedimiento seguro correcto, seleccionando las alertas encendidas.</p> -->
+                    </div>
+                    <div class="alertGameCont d-none">
+                        <div class="progressBarCont">
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light1">
+                                        <div class="tooltipCont1 info toolHide">
+                                            <div class="tooltip t4">
+                                               
+                                               <p>Espera a que el vehículo se apague y el operador descienda.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk1"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light2">
+                                        <div class="tooltipCont2 s4T2 info toolHide">
+                                            <div class="tooltip t5">
+                                                
+                                                <span class="hTip"><h3>Coloca el bloqueador en la llanta delantera izquierda.</h3></span>
+                                                <p>Esta acción nos ayuda a evitar acciones inseguras, ya que el operador solo podrá avanzar si se retira el bloqueador.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont chunkLast">
+                                    <div class="chunk2 chunkLast"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alertCont">
+                            <div id="alert4" class="iconCont2 short active2 current firstCheck"></div>
+                            <div id="alert5" class="iconCont2 long standBy lastCheck"></div>
+                        </div>
+                    </div>
+                    <div class="btn-next d-none" data-seek="31" onclick="continueVideo(this)">
+                        <p>Continuar</p>
+                    </div>
+                    <div id="superVideo4" class="superVideo"></div>
+                    <div class="vidSig">
+                        <div class="sig">
+                              <p class="reg"><i>Regresar</i></p>
+                             <p class="cont"><i>Siguiente</i></p>
+                        </div>
+                    </div> 
+                </div>
+                <!-- Slide video 5 -->
+                <div class="child noVisto" id="video-cont-5">
+                    <div id="vTitle5" class="videoTitle"></div>
+                    <img src="shared/img/play-btn.svg" class="play-btn" alt="" onclick="playBtn(this)">
+                    <!-- Container video 5 -->
+                    <div id="video_five" class="player">
+                        <video preload="none" poster="./shared/img/video/preview5.jpg">
+                            <source src="shared/video/Video05-web.mp4" type="video/mp4">
+                            <!-- fallback content here -->
+                        </video>
+                    </div>
+                    <!-- Reset bottom -->
+                    <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
+                    <div class="instruccion2 d-none">
+                        <!-- <p>Ayuda al colaborador a realizar el procedimiento seguro correcto, seleccionando las alertas encendidas.</p> -->
+                    </div>
+                    <div class="alertGameCont d-none">
+                        <div class="progressBarCont">
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light1">
+                                        <div class="tooltipCont1 info toolHide">
+                                            <div class="tooltip t6_2">
+                                               
+                                               <p>El encargado de seguridad coloca el bloqueador en la llanta delantera izquierda.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk1"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light2">
+                                        <div class="tooltipCont2 info toolHide">
+                                            <div class="tooltip t6">
+                                                
+                                                <p>El operador entrega documentos y llaves.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk2"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light3">
+                                        <div class="tooltipCont3 info toolHide">
+                                            <div class="tooltip t7">
+                                                
+                                                <p>El operador se dirige a la zona de sanitización.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk3"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light4">
+                                        <div class="tooltipCont4 info toolHide s5T4">
+                                            <div class="tooltip t8">
+                                                
+                                                <p>El operador se dirige a la zona segura.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk4"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light5">
+                                        <div class="tooltipCont5 info toolHide">
+                                            <div class="tooltip t9">
+                                                
+                                                <p>El encargado de seguridad verifica los documentos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk5"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light6">
+                                        <div class="tooltipCont6 info toolHide s5T6">
+                                            <div class="tooltip t10">
+                                                
+                                                <p>El encargado de seguridad revisa la cabina</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk6"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light7">
+                                        <div class="tooltipCont7 info toolHide">
+                                            <div class="tooltip t11">
+                                                
+                                                <p>El encargado de seguridad revisa los sellos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont chunkLast">
+                                    <div class="chunk7 chunkLast"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alertCont">
+                            <div id="alert6_2" class="iconCont2 short active2 current firstCheck"></div>
+                            <div id="alert6" class="iconCont2 short standBy"></div>
+                            <div id="alert7" class="iconCont2 short standBy"></div>
+                            <div id="alert8" class="iconCont2 short standBy"></div>
+                            <div id="alert9" class="iconCont2 short standBy"></div>
+                            <div id="alert10" class="iconCont2 short standBy"></div>
+                            <div id="alert11" class="iconCont2 short standBy lastCheck"></div>
+                        </div>
+                    </div>
+                    <div class="btn-next d-none" data-seek="40" onclick="continueVideo(this)">
+                        <p>Continuar</p>
+                    </div>
+                    <div id="superVideoSpecial" class="superVideo2"></div>
+                    <div id="superVideo5" class="superVideo"></div>
+                    <div class="vidSig">
+                        <div class="sig">
+                            <p class="reg"><i>Regresar</i></p>
+                            <p class="cont"><i>Siguiente</i></p>
+                        </div>
+                    </div> 
+                </div>
+                <!-- Slide video 6 -->
+                <div class="child noVisto" id="video-cont-6">
+                    <div id="vTitle6" class="videoTitle"></div>
+                    <img src="shared/img/play-btn.svg" class="play-btn" alt="" onclick="playBtn(this)">
+                    <!-- Container video 6 -->
+                    <div id="video_six" class="player">
+                        <video preload="none" poster="./shared/img/video/preview6.jpg">
+                            <source src="shared/video/Video06-web.mp4" type="video/mp4">
+                            <!-- fallback content here -->
+                        </video>
+                    </div>
+                    <!-- Reset bottom -->
+                    <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
+                    <div class="instruccion2 d-none">
+                        <!-- <p>Ayuda al colaborador a realizar el procedimiento seguro correcto, seleccionando las alertas encendidas.</p> -->
+                    </div>
+                    <div class="alertGameCont d-none">
+                        <div class="progressBarCont">
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light1">
+                                        <div class="tooltipCont1 info toolHide">
+                                            <div class="tooltip t12">
+                                               
+                                               <p>El encargado de seguridad retira el bloqueador.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk1"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light2">
+                                        <div class="tooltipCont2 info toolHide fixedPos1">
+                                            <div class="tooltip t13">
+                                                
+                                                <p>El encargado de seguridad se dirige a la zona de seguridad para encontrarse con el operador.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk2"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light3">
+                                        <div class="tooltipCont3 info toolHide">
+                                            <div class="tooltip t14">
+                                                
+                                                <p>El encargado de seguridad entrega llaves y documentos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk3"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light4">
+                                        <div class="tooltipCont4 s6T4 info toolHide">
+                                            <div class="tooltip t15">
+                                                
+                                                <p>El operador se dirige a su unidad, mientras que el encargado de seguridad permanece en la zona segura.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont">
+                                    <div class="chunk4"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light5">
+                                        <div class="tooltipCont5 s6T5 info toolHide">
+                                            <div class="tooltip t16">
+                                                
+                                                <p>El operador asciende.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont chunkLast">
+                                    <div class="chunk5 chunkLast"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alertCont">
+                            <div id="alert12" class="iconCont2 short active2 current firstCheck"></div>
+                            <div id="alert13" class="iconCont2 short standBy"></div>
+                            <div id="alert14" class="iconCont2 short standBy"></div>
+                            <div id="alert15" class="iconCont2 short standBy"></div>
+                            <div id="alert16" class="iconCont2 short standBy lastCheck"></div>
+                        </div>
+                    </div>
+                    <div class="btn-next d-none" data-seek="44" onclick="continueVideo(this)">
+                        <p>Continuar</p>
+                    </div>
+                    <div id="superVideo6" class="superVideo"></div>
+                    <div class="vidSig">
+                        <div class="sig">
+                            <p class="reg"><i>Regresar</i></p>
+                            <p class="cont"><i>Siguiente</i></p>
+                        </div>
+                    </div> 
+                </div>
+                <!-- Slide video 7 -->
+                <div class="child noVisto" id="video-cont-7">
+                    <div id="vTitle7" class="videoTitle"></div>
+                    <img src="shared/img/play-btn.svg" class="play-btn" alt="" onclick="playBtn(this)">
+                    <!-- Container video 7 -->
+                    <div id="video_seven" class="player">
+                        <video preload="none" poster="./shared/img/video/preview7.jpg">
+                            <source src="shared/video/Video07-web.mp4" type="video/mp4">
+                            <!-- fallback content here -->
+                        </video>
+                    </div>
+                    <!-- Reset bottom -->
+                    <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
+                    <div class="instruccion instruccion1 d-none">
+                        <!-- <p>Ayuda al colaborador a realizar el procedimiento seguro correcto, seleccionando las alertas encendidas.</p> -->
+                    </div>
+                    <div class="alertGameCont d-none">
+                        <div class="progressBarCont2">
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light1">
+                                        <div class="tooltipCont1 info toolHide">
+                                            <div class="tooltip t17">
+                                                <span class="hTip"><h3>Utiliza el cinturón de seguridad.</h3></span>
+                                               <p>(El uso del cinturón salvaguarda tu integridad).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont1">
+                                    <div class="chunk1"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light2">
+                                        <div class="tooltipCont2 info toolHide">
+                                            <div class="tooltip t18">
+                                                <span class="hTip"><h3>Espejea.</h3></span>
+                                                <p>(Revisa tu entorno para detectar cualquier riesgo que pudiera existir).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont1">
+                                    <div class="chunk2"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light3">
+                                        <div class="tooltipCont3 info toolHide">
+                                            <div class="tooltip t19">
+                                                <span class="hTip"><h3>Baja tus ventanas.</h3></span>
+                                                <p>(Esto te ayuda a poder escuchar cualquier aviso de alerta en el entorno).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont1">
+                                    <div class="chunk3"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light4">
+                                        <div class="tooltipCont4 info toolHide">
+                                            <div class="tooltip t20">
+                                                <span class="hTip"><h3>La velocidad máxima es 10 km/h.</h3></span>
+                                                <p>(Respeta la velocidad máxima establecida en cada ubicación de Grupo Bimbo).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont1">
+                                    <div class="chunk4"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light5">
+                                        <div class="tooltipCont5 info toolHide">
+                                            <div class="tooltip t21">
+                                                <p>Enciende luces e intermitentes.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont1">
+                                    <div class="chunk5"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light6">
+                                        <div class="tooltipCont6 info toolHide">
+                                            <div class="tooltip t22">
+                                                <span class="hTip"><h3>Enciende torretas.</h3></span>
+                                                <p>(Ayuda a ser más visible para posibles personas distraídas).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont1">
+                                    <div class="chunk6"></div>
+                                </div>
+                            </div>
+                            <div class="progressBar">
+                                <div class="lightbg bolita">
+                                    <div class="light7">
+                                        <div class="tooltipCont7 s7T7 info toolHide">
+                                            <div class="tooltip t23">
+                                                <span class="hTip"><h3>Evita distractores como el teléfono celular.</h3></span>
+                                                <p>(Estar atento en todo momento evita una acción insegura).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chunkCont1 chunkLast">
+                                    <div class="chunk7 chunkLast"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alertCont">
+                            <div id="alert17" class="iconCont2 short active2 current firstCheck"></div>
+                            <div id="alert18" class="iconCont2 long standBy"></div>
+                            <div id="alert19" class="iconCont2 short standBy"></div>
+                            <div id="alert20" class="iconCont2 short standBy"></div>
+                            <div id="alert21" class="iconCont2 short standBy"></div>
+                            <div id="alert22" class="iconCont2 short standBy"></div>
+                            <div id="alert23" class="iconCont2 short standBy lastCheck"></div>
+                        </div>
+                    </div>
+                    <div class="btn-next d-none" data-seek="28" onclick="continueVideo(this)">
+                        <p>Continuar</p>
+                    </div>
+                    <div id="superVideo7" class="superVideo"></div>
+                    <div class="vidSig">
+                        <div class="sig">
+                            <p class="reg"><i>Regresar</i></p>
+                            <p class="cont"><i>Siguiente</i></p>
+                        </div>
+                    </div> 
+                </div>
+                <!-- Termina slides eLearning -->
+                <!-- Inicia slides examen -->
+                <div class="child examenChild noVisto" id="examen1">
+                    <div class="videoTitle actFinal">
+
+                    </div>
+                    <div class="exTitle">
+
+                    </div>
+                    <div class="exDad">
+                        <div class="exChildGood" id="ex1">
+                            <div class="exCorrecto res1"></div>
+                            <img class="resReset " src="./shared/img/examen/1bien.jpg " alt=" ">
+                        </div>
+                        <div class="exChildBad" id="ex2">
+                            <div class="exIncorrecto res1"></div>
+                            <img class="resReset" src="./shared/img/examen/1mal.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="exSiguiente1 exSig">
+
+                    </div>
+                    <div class="strikeWrap">
+                        <div class="strikeCont"><div class="1st strike"></div></div>
+                        <div class="strikeCont"><div class="2nd strike"></div></div>
+                        <div class="strikeCont"><div class="3rd strike"></div></div>
+                    </div>
+                </div>
+                <div class="child examenChild noVisto" id="examen2">
+                    <div class="videoTitle actFinal">
+
+                    </div>
+                    <div class="exTitle">
+
+                    </div>
+                    <div class="exDad">
+                        <div class="exChildBad" id="ex1">
+                            <div class="exIncorrecto res2"></div>
+                            <img class="resReset" src="./shared/img/examen/2mal.jpg" alt="">
+                        </div>
+                        <div class="exChildGood" id="ex2">
+                            <div class="exCorrecto res2"></div>
+                            <img class="resReset" src="./shared/img/examen/2bien.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="exSiguiente2 exSig">
+
+                    </div>
+                    <div class="strikeWrap">
+                        <div class="strikeCont"><div class="1st strike"></div></div>
+                        <div class="strikeCont"><div class="2nd strike"></div></div>
+                        <div class="strikeCont"><div class="3rd strike"></div></div>
+                    </div>
+                </div>
+                <div class="child examenChild noVisto" id="examen3">
+                    <div class="videoTitle actFinal">
+
+                    </div>
+                    <div class="exTitle">
+
+                    </div>
+                    <div class="exDad">
+                        <div class="exChildBad" id="ex1">
+                            <div class="exIncorrecto res3"></div>
+                            <img class="resReset" src="./shared/img/examen/3mal.jpg" alt="">
+                        </div>
+                        <div class="exChildGood" id="ex2">
+                            <div class="exCorrecto res3"></div>
+                            <img class="resReset" src="./shared/img/examen/3bien.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="exSiguiente3 exSig">
+
+                    </div>
+                    <div class="strikeWrap">
+                        <div class="strikeCont"><div class="1st strike"></div></div>
+                        <div class="strikeCont"><div class="2nd strike"></div></div>
+                        <div class="strikeCont"><div class="3rd strike"></div></div>
+                    </div>
+                </div>
+                <div class="child examenChild noVisto" id="examen4">
+                    <div class="videoTitle actFinal">
+
+                    </div>
+                    <div class="exTitle">
+
+                    </div>
+                    <div class="exDad">
+                        <div class="exChildGood" id="ex1">
+                            <div class="exCorrecto res4"></div>
+                            <img class="resReset" src="./shared/img/examen/4bien.jpg" alt="">
+                        </div>
+                        <div class="exChildBad" id="ex2">
+                            <div class="exIncorrecto res4"></div>
+                            <img class="resReset" src="./shared/img/examen/4mal.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="exSiguiente4 exSig">
+
+                    </div>
+                    <div class="strikeWrap">
+                        <div class="strikeCont"><div class="1st strike"></div></div>
+                        <div class="strikeCont"><div class="2nd strike"></div></div>
+                        <div class="strikeCont"><div class="3rd strike"></div></div>
+                    </div>
+                </div>
+                <div class="child examenChild noVisto" id="examen5">
+                    <div class="videoTitle actFinal">
+
+                    </div>
+                    <div class="exTitle">
+
+                    </div>
+                    <div class="exDad">
+                        <div class="exChildBad" id="ex1">
+                            <div class="exIncorrecto res5"></div>
+                            <img class="resReset" src="./shared/img/examen/5mal.jpg" alt="">
+                        </div>
+                        <div class="exChildGood" id="ex2">
+                            <div class="exCorrecto res5"></div>
+                            <img class="resReset" src="./shared/img/examen/5bien.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="exSiguiente5 exSig">
+
+                    </div>
+                    <div class="strikeWrap">
+                        <div class="strikeCont"><div class="1st strike"></div></div>
+                        <div class="strikeCont"><div class="2nd strike"></div></div>
+                        <div class="strikeCont"><div class="3rd strike"></div></div>
+                    </div>
+                </div>
+                <div class="child examenChild noVisto" id="examen6">
+                    <div class="videoTitle actFinal">
+
+                    </div>
+                    <div class="exTitle">
+
+                    </div>
+                    <div class="exDad">
+                        <div class="exChildGood" id="ex1">
+                            <div class="exCorrecto res6"></div>
+                            <img class="resReset" src="./shared/img/examen/6bien.jpg" alt="">
+                        </div>
+                        <div class="exChildBad" id="ex2">
+                            <div class="exIncorrecto res6"></div>
+                            <img class="resReset" src="./shared/img/examen/6mal.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="exSiguiente6 exSig">
+
+                    </div>
+                    <div class="strikeWrap">
+                        <div class="strikeCont"><div class="1st strike"></div></div>
+                        <div class="strikeCont"><div class="2nd strike"></div></div>
+                        <div class="strikeCont"><div class="3rd strike"></div></div>
+                    </div>
+                </div>
+                <div class="child examenChild noVisto" id="examen7">
+                    <div class="videoTitle actFinal">
+
+                    </div>
+                    <div class="exTitle">
+
+                    </div>
+                    <div class="exDad">
+                        <div class="exChildBad" id="ex1">
+                            <div class="exIncorrecto res7"></div>
+                            <img class="resReset" src="./shared/img/examen/7mal.jpg" alt="">
+                        </div>
+                        <div class="exChildGood" id="ex2">
+                            <div class="exCorrecto res7"></div>
+                            <img class="resReset" src="./shared/img/examen/7bien.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="exSiguiente7 exSig">
+
+                    </div>
+                    <div class="strikeWrap">
+                        <div class="strikeCont"><div class="1st strike"></div></div>
+                        <div class="strikeCont"><div class="2nd strike"></div></div>
+                        <div class="strikeCont"><div class="3rd strike"></div></div>
+                    </div>
+                </div>
+                <!-- Termina slides examen -->
+                <!-- Inicia slides despedida -->
+                <div class="child" id="despedida">
+                    <div class="cont-wrap">
+                        <div class="welcomeTxt">
+                            <div class="byeTxt border-red">
+                                <img class="star" src="shared/img/star.png" alt="">
+                                <img class="star" src="shared/img/star.png" alt="">
+                                <img class="star" src="shared/img/star.png" alt="">
+                                <p class="bye-title"></p>
+                                <img class="star" src="shared/img/star.png" alt="">
+                                <img class="star" src="shared/img/star.png" alt="">
+                                <img class="star" src="shared/img/star.png" alt="">
+                            </div>
+                            <p class="txt-d m-topd"></p>
+                            <div class="logo-bimbo"><img src="shared/img/bimbo.svg" alt=""></div>
+                            <div class="char uno"><img src="shared/img/worker01.png" alt=""></div>
+                            <div class="char dos"><img src="shared/img/worker02.png" alt=""></div>
+                            <div id="btn-finalizar">
+                                <p>Finalizar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Termina slides despedida -->
+                <!-- Div nulo para función Widow Reload -->
+                <div class="child" id="nulo">
+                </div>
+            </div>
+            <!-- Termina slide General -->
+            <!-- right arroww nav -->
+            <div class="noVes" id="derArrow" onclick="scrollToNextItem(this)">
+                <img src="./shared/img/flechaDer.svg" alt="">
+            </div>
+        </div>
+        <!-- Logo Footer -->
+        <div id="footer" class="animate__animated animate__fadeInUp">
+            <img src="./shared/img/gb.svg" alt="">
+            <div class="btn-test">
+                <!--
+                <a class="btn-resize" onClick="window.moveTo(0,0);window.resizeTo(screen.availWidth, screen.availHeight);">Resize</a>
+                <a class="btn-resize" onClick="openFullscreen();">Fullscreen</a> -->
+            </div>
+        </div>
+        <div class="css-orientation">
+            <img src="./shared/img/rotacion.svg" alt="icon-orientation">
+            
+        </div>
+
+    </div>
+    <!-- Libs -->
+    <script src="./shared/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script type="module" src="./shared/js/puntosData.js"></script>
+    <script src="./shared/js/TweenMax.min.js"></script>
+    <!-- <script src="./shared/js/temp.js"></script> -->
+    <script src="./shared/js/custom-player.js"></script>
+    <script src="./shared/js/language-select.js"></script>
+    <script src="./shared/js/lanLoad.js"></script>
+    <script src="shared/js/puntos.js"></script>
+    <script src="./shared/js/main.js"></script>
+
+</body>
+
+</html>
