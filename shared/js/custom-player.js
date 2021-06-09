@@ -5,48 +5,62 @@ const videoFour = document.querySelector('#video_four>video');
 const videoFive = document.querySelector('#video_five>video');
 const videoSix = document.querySelector('#video_six>video');
 const videoSeven = document.querySelector('#video_seven>video');
+const videoEight = document.querySelector('#video_eight>video');
+const videoNine = document.querySelector('#video_nine>video');
+const videoTen = document.querySelector('#video_ten>video');
+const videoEleven = document.querySelector('#video_eleven>video');
 
 video.addEventListener('play', (event) => {
 
-  video.webkitExitFullscreen();
+  video.webkitExitFullscreen(); //Para salir de pantalla completa en iOS
   video.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
-
+  // Carga video siguiente
   videoTwo.load()
+  // Desactiva flechas
   $('#izqArrow').removeClass("active")
   $('#derArrow').removeClass("active")
   $('#izqArrow').addClass("unactive")
   $('#derArrow').addClass("unactive")
+  // aparece boton reset
   $('.btn-reset').removeClass("d-none")
+  // Función para brincar a cierto segundo
   video.addEventListener('timeupdate', (event) => {
 
-    //Pausa en reacción mala
-    if (event.target.currentTime >= 16 && event.target.currentTime <= 17) {
+    //Pausa en reacción mala alarma
+    if (event.target.currentTime >= 26 && event.target.currentTime <= 27) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       video.pause()
       video.webkitExitFullscreen();
+      //Aparece triva
       $(".trivia").removeClass("d-none")
+      //Shuffle a respuestas
       shuffleElements("#iconCont1")
+      //Reproduce audio Among Us
       audioTrivia()
     }
 
     //Escondido del super antes del final del video
-    if (event.target.currentTime >= 29 && event.target.currentTime <= 30) {
+    /* if (event.target.currentTime >= 29 && event.target.currentTime <= 30) {
       $(".superVideo").css("display", "none")
-    }
+    } */
 
-    //Regreso a la situación original
-     if (event.target.currentTime >= 32 && event.target.currentTime <= 33) {
+    //Pausa cuando termine el video
+     if (event.target.currentTime >= 60 && event.target.currentTime <= 61) {
        window.localStorage.setItem("currentTime", event.target.currentTime)
        video.pause()
        video.webkitExitFullscreen();
+       //Overlay de siguiente
        $(".vidSig").css("display", "block")
+       //Oculta texto de apoyo
        $(".superVideo").css("display", "none")
+       //Activa Flechas
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
        $('#izqArrow').addClass("active")
+       //Oculta botones de continuar y reset
        $('.btn-next').addClass("d-none")
        $('.btn-reset').addClass("d-none")
        $(".superVideo").css("display", "none")
@@ -61,7 +75,7 @@ video.addEventListener('play', (event) => {
 
 // --Ir desbloqueando y adaptando conforme vayamos incorporando los videos-- Inicio
 
-// // //video 2
+//video 2
  videoTwo.addEventListener('play', (event) => {
 
    video.webkitExitFullscreen();
@@ -88,10 +102,10 @@ video.addEventListener('play', (event) => {
        audioTrivia()
      }
 
-     //Escondido del super antes del final del video
+     /* //Escondido del super antes del final del video solo activar cuando se necesite
     if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
       $(".superVideo").css("display", "none")
-    }
+    } */
 
      //Regreso a la situación original
       if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
@@ -116,9 +130,11 @@ video.addEventListener('play', (event) => {
    });
  });
 
-// //video 3
+//Video Tres
 videoThree.addEventListener('play', (event) => {
 
+  video.webkitExitFullscreen();
+  videoThree.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
@@ -131,49 +147,49 @@ videoThree.addEventListener('play', (event) => {
   $('.btn-reset').removeClass("d-none")
   videoThree.addEventListener('timeupdate', (event) => {
 
-    //Pausa principal 1era
-    if (event.target.currentTime >= 21 && event.target.currentTime <= 21.5) {
-      console.log("yes")
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoThree.pause()
       videoThree.webkitExitFullscreen();
-      $(".alertCont").css("background-image", 'url(./shared/img/tablero.jpg)'); 
-      $(".instruccion1").removeClass("d-none")
-      $(".alertGameCont").removeClass("d-none")
-     
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
       audioTrivia()
     }
 
-    //Escondido del super antes del final del video
-    if (event.target.currentTime >= 39 && event.target.currentTime <= 40) {
+   /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
       $(".superVideo").css("display", "none")
-    }
+    } */
 
-    //Pausa al final de la situación original
-    if (event.target.currentTime >= 42 && event.target.currentTime <= 43) {
-      window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoThree.pause()
-      videoThree.webkitExitFullscreen();
-      $(".vidSig").css("display", "block")
-      $(".superVideo").css("display", "none")
-      $(".good").css("pointer-events", "all")
-      $(".bad").css("pointer-events", "all")
-      $('#izqArrow').removeClass("unactive")
-      $('#derArrow').removeClass("unactive")
-      $(".superVideo").css("display", "none")
-      $('#izqArrow').addClass("active")
-      $('#derArrow').addClass("active")
-      $('.btn-next').addClass("d-none")
-      derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
-      videoThree.currentTime = 0
-      videoThree.load()
-    }
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoThree.pause()
+       videoThree.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoThree.currentTime = 0
+       videoThree.load()
+     }
   });
 });
 
-// //video 4
+//Video 4
 videoFour.addEventListener('play', (event) => {
 
+  video.webkitExitFullscreen();
+  videoFour.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
@@ -186,48 +202,49 @@ videoFour.addEventListener('play', (event) => {
   $('.btn-reset').removeClass("d-none")
   videoFour.addEventListener('timeupdate', (event) => {
 
-    //Pausa principal 1era
-    if (event.target.currentTime >= 26 && event.target.currentTime <= 27) {
-      console.log("yes")
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoFour.pause()
       videoFour.webkitExitFullscreen();
-      $(".alertCont").css("background-image", 'url(./shared/img/frente.jpg)'); 
-      $(".instruccion2").removeClass("d-none")
-      $(".alertGameCont").removeClass("d-none")
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
       audioTrivia()
     }
 
-    //Escondido del super antes del final del video
-    if (event.target.currentTime >= 55 && event.target.currentTime <= 56) {
+   /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
       $(".superVideo").css("display", "none")
-    }
+    } */
 
-    //Pausa al final de la situación original
-    if (event.target.currentTime >= 58 && event.target.currentTime <= 59) {
-      window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoFour.pause()
-      videoFour.webkitExitFullscreen();
-      $(".vidSig").css("display", "block")
-      $(".superVideo").css("display", "none")
-      $(".good").css("pointer-events", "all")
-      $(".bad").css("pointer-events", "all")
-      $('#izqArrow').removeClass("unactive")
-      $('#derArrow').removeClass("unactive")
-      $(".superVideo").css("display", "none")
-      $('#izqArrow').addClass("active")
-      $('#derArrow').addClass("active")
-      $('.btn-next').addClass("d-none")
-      derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
-      videoFour.currentTime = 0
-      videoFour.load()
-    }
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoFour.pause()
+       videoFour.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoFour.currentTime = 0
+       videoFour.load()
+     }
   });
 });
 
-// //video 5
+//Video 5
 videoFive.addEventListener('play', (event) => {
 
+  video.webkitExitFullscreen();
+  videoFive.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
@@ -240,59 +257,50 @@ videoFive.addEventListener('play', (event) => {
   $('.btn-reset').removeClass("d-none")
   videoFive.addEventListener('timeupdate', (event) => {
 
-    //Mostrado del superSpecial
-
-    if (event.target.currentTime >= 23 && event.target.currentTime <= 24) {
-      $('#superVideoSpecial').css("display","block")
-    }
-
-    if (event.target.currentTime >= 29 && event.target.currentTime <= 30) {
-      $('#superVideoSpecial').css("display","none")
-    }
-
-    //Pausa principal 1era
-    if (event.target.currentTime >= 37 && event.target.currentTime <= 38) {
-      console.log("yes")
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoFive.pause()
       videoFive.webkitExitFullscreen();
-      $('#superVideoSpecial').css("display","none")
-      $(".alertCont").css("background-image", 'url(./shared/img/top.jpg)'); 
-      $(".instruccion2").removeClass("d-none")
-      $(".alertGameCont").removeClass("d-none")
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
       audioTrivia()
     }
 
-    //Escondido del super antes del final del video
-    if (event.target.currentTime >= 70 && event.target.currentTime <= 71) {
+   /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
       $(".superVideo").css("display", "none")
-    }
+    } */
 
-    //Pausa al final de la situación original
-    if (event.target.currentTime >= 73 && event.target.currentTime <= 74) {
-      window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoFive.pause()
-      videoFive.webkitExitFullscreen();
-      $(".vidSig").css("display", "block")
-      $(".superVideo").css("display", "none")
-      $(".good").css("pointer-events", "all")
-      $(".bad").css("pointer-events", "all")
-      $('#izqArrow').removeClass("unactive")
-      $('#derArrow').removeClass("unactive")
-      $(".superVideo").css("display", "none")
-      $('#izqArrow').addClass("active")
-      $('#derArrow').addClass("active")
-      $('.btn-next').addClass("d-none")
-      derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
-      videoFive.currentTime = 0
-      videoFive.load()
-    }
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoFive.pause()
+       videoFive.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoFive.currentTime = 0
+       videoFive.load()
+     }
   });
 });
 
-// //video 6
+//Video 6
+
 videoSix.addEventListener('play', (event) => {
 
+  video.webkitExitFullscreen();
+  videoSix.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
@@ -305,47 +313,276 @@ videoSix.addEventListener('play', (event) => {
   $('.btn-reset').removeClass("d-none")
   videoSix.addEventListener('timeupdate', (event) => {
 
-    //Pausa principal 1era
-    if (event.target.currentTime >= 40 && event.target.currentTime <= 41) {
-      console.log("yes")
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoSix.pause()
       videoSix.webkitExitFullscreen();
-      $(".alertCont").css("background-image", 'url(./shared/img/top2.jpg)'); 
-      $(".instruccion2").removeClass("d-none")
-      $(".alertGameCont").removeClass("d-none")
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
       audioTrivia()
     }
 
-    //Escondido del super antes del final del video
-    if (event.target.currentTime >= 79 && event.target.currentTime <= 80) {
+    /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
       $(".superVideo").css("display", "none")
-    }
+    } */
 
-    //Pausa al final de la situación original
-    if (event.target.currentTime >= 82 && event.target.currentTime <= 83) {
-      window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoSix.pause()
-      videoSix.webkitExitFullscreen();
-      $(".vidSig").css("display", "block")
-      $(".superVideo").css("display", "none")
-      $(".good").css("pointer-events", "all")
-      $(".bad").css("pointer-events", "all")
-      $('#izqArrow').removeClass("unactive")
-      $('#derArrow').removeClass("unactive")
-      $('#izqArrow').addClass("active")
-      $('#derArrow').addClass("active")
-      $('.btn-next').addClass("d-none")
-      derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
-      videoSix.currentTime = 0
-      videoSix.load()
-    }
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoSix.pause()
+       videoSix.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoSix.currentTime = 0
+       videoSix.load()
+     }
   });
 });
 
-// //video 7
+//Video 7
 videoSeven.addEventListener('play', (event) => {
 
+  video.webkitExitFullscreen();
+  videoSeven.play()
+  if (!$(".play-btn").hasClass("d-none")) {
+    $(".play-btn").addClass("d-none")
+  }
+
+  videoEight.load()
+  $('#izqArrow').removeClass("active")
+  $('#derArrow').removeClass("active")
+  $('#izqArrow').addClass("unactive")
+  $('#derArrow').addClass("unactive")
+  $('.btn-reset').removeClass("d-none")
+  videoSeven.addEventListener('timeupdate', (event) => {
+
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
+      window.localStorage.setItem("currentTime", event.target.currentTime)
+      videoSeven.pause()
+      videoSeven.webkitExitFullscreen();
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
+      audioTrivia()
+    }
+
+   /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
+      $(".superVideo").css("display", "none")
+    } */
+
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoSeven.pause()
+       videoSeven.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoSeven.currentTime = 0
+       videoSeven.load()
+     }
+  });
+});
+
+
+//Video 8
+
+videoEight.addEventListener('play', (event) => {
+
+  video.webkitExitFullscreen();
+  videoEight.play()
+  if (!$(".play-btn").hasClass("d-none")) {
+    $(".play-btn").addClass("d-none")
+  }
+
+  videoNine.load()
+  $('#izqArrow').removeClass("active")
+  $('#derArrow').removeClass("active")
+  $('#izqArrow').addClass("unactive")
+  $('#derArrow').addClass("unactive")
+  $('.btn-reset').removeClass("d-none")
+  videoEight.addEventListener('timeupdate', (event) => {
+
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
+      window.localStorage.setItem("currentTime", event.target.currentTime)
+      videoEight.pause()
+      videoEight.webkitExitFullscreen();
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
+      audioTrivia()
+    }
+
+   /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
+      $(".superVideo").css("display", "none")
+    } */
+
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoEight.pause()
+       videoEight.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoEight.currentTime = 0
+       videoEight.load()
+     }
+  });
+});
+
+//Video 9
+
+videoNine.addEventListener('play', (event) => {
+
+  video.webkitExitFullscreen();
+  videoNine.play()
+  if (!$(".play-btn").hasClass("d-none")) {
+    $(".play-btn").addClass("d-none")
+  }
+
+  videoTen.load()
+  $('#izqArrow').removeClass("active")
+  $('#derArrow').removeClass("active")
+  $('#izqArrow').addClass("unactive")
+  $('#derArrow').addClass("unactive")
+  $('.btn-reset').removeClass("d-none")
+  videoNine.addEventListener('timeupdate', (event) => {
+
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
+      window.localStorage.setItem("currentTime", event.target.currentTime)
+      videoNine.pause()
+      videoNine.webkitExitFullscreen();
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
+      audioTrivia()
+    }
+
+   /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
+      $(".superVideo").css("display", "none")
+    } */
+
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoNine.pause()
+       videoNine.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoNine.currentTime = 0
+       videoNine.load()
+     }
+  });
+});
+
+
+//Video 10
+
+videoTen.addEventListener('play', (event) => {
+
+  video.webkitExitFullscreen();
+  videoTen.play()
+  if (!$(".play-btn").hasClass("d-none")) {
+    $(".play-btn").addClass("d-none")
+  }
+
+  videoEleven.load()
+  $('#izqArrow').removeClass("active")
+  $('#derArrow').removeClass("active")
+  $('#izqArrow').addClass("unactive")
+  $('#derArrow').addClass("unactive")
+  $('.btn-reset').removeClass("d-none")
+  videoTen.addEventListener('timeupdate', (event) => {
+
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
+      window.localStorage.setItem("currentTime", event.target.currentTime)
+      videoTen.pause()
+      videoTen.webkitExitFullscreen();
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
+      audioTrivia()
+    }
+
+   /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
+      $(".superVideo").css("display", "none")
+    } */
+
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoTen.pause()
+       videoTen.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoTen.currentTime = 0
+       videoTen.load()
+     }
+  });
+});
+
+
+//Video 11
+
+videoEleven.addEventListener('play', (event) => {
+
+  video.webkitExitFullscreen();
+  videoEleven.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
@@ -355,45 +592,43 @@ videoSeven.addEventListener('play', (event) => {
   $('#izqArrow').addClass("unactive")
   $('#derArrow').addClass("unactive")
   $('.btn-reset').removeClass("d-none")
-  videoSeven.addEventListener('timeupdate', (event) => {
+  videoEleven.addEventListener('timeupdate', (event) => {
 
-    //Pausa principal 1era
-    if (event.target.currentTime >= 24 && event.target.currentTime <= 25) {
-      console.log("yes")
+//     Pausa en reacción mala
+    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoSeven.pause()
-      videoSeven.webkitExitFullscreen();
-      $(".alertCont").css("background-image", 'url(./shared/img/screen.jpg)'); 
-      $(".instruccion1").removeClass("d-none")
-      $(".alertGameCont").removeClass("d-none")
+      videoEleven.pause()
+      videoEleven.webkitExitFullscreen();
+      $(".trivia").removeClass("d-none")
+      shuffleElements("#iconCont2")
       audioTrivia()
     }
 
-    //Escondido del super antes del logo Bimbo
-    if (event.target.currentTime >= 48 && event.target.currentTime <= 49) {
+   /* //Escondido del super antes del final del video solo activar cuando se necesite
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
       $(".superVideo").css("display", "none")
-    }
+    } */
 
-
-    //Pausa al final de la situación original
-    if (event.target.currentTime >= 57.7 && event.target.currentTime <= 58.5) {
-      window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoSeven.pause()
-      videoSeven.webkitExitFullscreen();
-      $(".vidSig").css("display", "block")
-      $(".superVideo").css("display", "none")
-      $(".good").css("pointer-events", "all")
-      $(".bad").css("pointer-events", "all")
-      $('#izqArrow').removeClass("unactive")
-      $('#derArrow').removeClass("unactive")
-      $(".superVideo").css("display", "none")
-      $('#izqArrow').addClass("active")
-      $('#derArrow').addClass("active")
-      $('.btn-next').addClass("d-none")
-      derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
-      videoSeven.currentTime = 0
-      videoSeven.load()
-    }
+    //Regreso a la situación original
+     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+       console.log("yes")
+       window.localStorage.setItem("currentTime", event.target.currentTime)
+       videoEleven.pause()
+       videoEleven.webkitExitFullscreen();
+       $(".vidSig").css("display", "block")
+       $(".superVideo").css("display", "none")
+       $('#izqArrow').removeClass("unactive")
+       $('#derArrow').removeClass("unactive")
+       $('#izqArrow').addClass("active")
+       $('.btn-reset').addClass("d-none")
+       $(".icon").css("pointer-events", "all")
+       $(".superVideo").css("display", "none")
+       $('#derArrow').addClass("active")
+       $('.btn-next').addClass("d-none")
+       derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
+       videoEleven.currentTime = 0
+       videoEleven.load()
+     }
   });
 });
 

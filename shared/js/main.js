@@ -1,5 +1,5 @@
 scrollMobile()
-// hackSlides()
+hackSlides()
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;

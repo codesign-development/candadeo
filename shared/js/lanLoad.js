@@ -111,6 +111,10 @@ function setData(data) {
     let vidTit5 = $("<p>" + data.titulos.v5 + "</p>");
     let vidTit6 = $("<p>" + data.titulos.v6 + "</p>");
     let vidTit7 = $("<p>" + data.titulos.v7 + "</p>");
+    let vidTit8 = $("<p>" + data.titulos.v8 + "</p>");
+    let vidTit9 = $("<p>" + data.titulos.v9 + "</p>");
+    let vidTit10 = $("<p>" + data.titulos.v10 + "</p>");
+    let vidTit11 = $("<p>" + data.titulos.v11 + "</p>");
     let actTit12 = $("<p>" + data.titulos.a12 + "</p>");
 
     $(".videoTitle").html("");
@@ -121,6 +125,10 @@ function setData(data) {
     $("#vTitle5").append(vidTit5);
     $("#vTitle6").append(vidTit6);
     $("#vTitle7").append(vidTit7);
+    $("#vTitle8").append(vidTit8);
+    $("#vTitle9").append(vidTit9);
+    $("#vTitle10").append(vidTit10);
+    $("#vTitle11").append(vidTit11);
     $(".actFinal").append(actTit12);
  
 
@@ -133,6 +141,25 @@ function setData(data) {
     let riesgo4 = $("<p>" + data.iconosTextos.icono4 + "</p>");
     let riesgo5 = $("<p>" + data.iconosTextos.icono5 + "</p>");
     let riesgo6 = $("<p>" + data.iconosTextos.icono6 + "</p>");
+    let riesgo7 = $("<p>" + data.iconosTextos.icono7 + "</p>");
+    let riesgo8 = $("<p>" + data.iconosTextos.icono8 + "</p>");
+    let riesgo9 = $("<p>" + data.iconosTextos.icono9 + "</p>");
+    let riesgo10 = $("<p>" + data.iconosTextos.icono10 + "</p>");
+    let riesgo11 = $("<p>" + data.iconosTextos.icono11 + "</p>");
+    let riesgo12 = $("<p>" + data.iconosTextos.icono12 + "</p>");
+    let riesgo13 = $("<p>" + data.iconosTextos.icono13 + "</p>");
+    let riesgo14 = $("<p>" + data.iconosTextos.icono14 + "</p>");
+    let riesgo15 = $("<p>" + data.iconosTextos.icono15 + "</p>");
+    let riesgo16 = $("<p>" + data.iconosTextos.icono16 + "</p>");
+    let riesgo17 = $("<p>" + data.iconosTextos.icono17 + "</p>");
+    let riesgo18 = $("<p>" + data.iconosTextos.icono18 + "</p>");
+    let riesgo19 = $("<p>" + data.iconosTextos.icono19 + "</p>");
+    let riesgo20 = $("<p>" + data.iconosTextos.icono20 + "</p>");
+    let riesgo21 = $("<p>" + data.iconosTextos.icono21 + "</p>");
+    let riesgo22 = $("<p>" + data.iconosTextos.icono22 + "</p>");
+    let riesgo23 = $("<p>" + data.iconosTextos.icono23 + "</p>");
+    let riesgo24 = $("<p>" + data.iconosTextos.icono24 + "</p>");
+    let riesgo25 = $("<p>" + data.iconosTextos.icono25 + "</p>");
     let btnCont = $("<p>" + data.txtTrivia.btnConti + "</p>");
 
     $(".txt-inst").html("");
@@ -146,6 +173,25 @@ function setData(data) {
     $(".txtIcon4").append(riesgo4);
     $(".txtIcon5").append(riesgo5);
     $(".txtIcon6").append(riesgo6);
+    $(".txtIcon7").append(riesgo7);
+    $(".txtIcon8").append(riesgo8);
+    $(".txtIcon9").append(riesgo9);
+    $(".txtIcon10").append(riesgo10);
+    $(".txtIcon11").append(riesgo11);
+    $(".txtIcon12").append(riesgo12);
+    $(".txtIcon13").append(riesgo13);
+    $(".txtIcon14").append(riesgo14);
+    $(".txtIcon15").append(riesgo15);
+    $(".txtIcon16").append(riesgo16);
+    $(".txtIcon17").append(riesgo17);
+    $(".txtIcon18").append(riesgo18);
+    $(".txtIcon19").append(riesgo19);
+    $(".txtIcon20").append(riesgo20);
+    $(".txtIcon21").append(riesgo21);
+    $(".txtIcon22").append(riesgo22);
+    $(".txtIcon23").append(riesgo23);
+    $(".txtIcon24").append(riesgo24);
+    $(".txtIcon25").append(riesgo25);
 
 
     
@@ -220,7 +266,11 @@ function setData(data) {
     let vidSpe = $("<p>" + data.super.supspe + "</p>");
     let vidSup5 = $("<p>" + data.super.sup5 + "</p>");
     let vidSup6 = $("<p>" + data.super.sup6 + "</p>");
-    let vidSup7 = $("<p>" + data.super.sup7a + "<ul>" + "<li>" + data.super.sup7b + "</li>" + "<li>" + data.super.sup7c + "</li>" + "<li>" + data.super.sup7d + "</li>" + "</ul>" + "</p>");
+    let vidSup7 = $("<p>" + data.super.sup7 + "</p>");
+    let vidSup8 = $("<p>" + data.super.sup8 + "</p>");
+    let vidSup9 = $("<p>" + data.super.sup9 + "</p>");
+    let vidSup10 = $("<p>" + data.super.sup10 + "</p>");
+    let vidSup11 = $("<p>" + data.super.sup11 + "</p>");
 
 
     $(".superVideo").html("");
@@ -232,6 +282,10 @@ function setData(data) {
     $("#superVideo5").append(vidSup5);
     $("#superVideo6").append(vidSup6);
     $("#superVideo7").append(vidSup7);
+    $("#superVideo8").append(vidSup8);
+    $("#superVideo9").append(vidSup9);
+    $("#superVideo10").append(vidSup10);
+    $("#superVideo11").append(vidSup11);
 
     // Flechas textos
 

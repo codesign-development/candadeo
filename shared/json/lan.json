@@ -7,7 +7,7 @@
         },
 
         "curso":{
-            "nameCurso": "Seguridad en el Ingreso de los Transportes a Centros Productivos y Centros de Distribución"
+            "nameCurso": "Procedimiento para la operación de Mantenimiento a los Transportes"
         },
 
         "bienvenida":{
@@ -24,13 +24,17 @@
         },
 
         "titulos":{ 
-            "v1":"Ingreso seguro, cuidado al peatón",
+            "v1":"Una falla en tu vehículo",
             "v2":"Acceso seguro a las instalaciones",
             "v3":"El transportador ingresa y frena en el área delimitada",
             "v4":"El bloqueador como clave fundamental",
             "v5":"El transportador entrega documentos y llaves al encargado de seguridad",
             "v6":"Entrega de llave y documentos para ascenso a la unidad",
             "v7":"Avanzar la unidad",
+            "v8":"Avanzar la unidad",
+            "v9":"Avanzar la unidad",
+            "v10":"Avanzar la unidad",
+            "v11":"Avanzar la unidad",
             "a12":"Actividad final"
         },
 
@@ -50,12 +54,31 @@
         },
 
         "iconosTextos":{
-            "icono1": "Detener el vehículo después del paso peatonal",
-            "icono2": "Detener el vehículo antes del paso peatonal",
-            "icono3": "Detener el vehículo sobre el paso peatonal",
+            "icono1": "Prevenir accidentes hacia ti o terceros",
+            "icono2": "Asegurarte que tu vehículo está en buenas condiciones y así tener un viaje seguro.",
+            "icono3": "Todas las anteriores",
             "icono4": "Esperar la indicación de ingreso por parte del encargado de seguridad",
             "icono5": "Avanzar para no obstaculizar el cruce peatonal",
-            "icono6":"Incrementar la velocidad antes de que cierre la puerta"
+            "icono6":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono7":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono8":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono9":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono10":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono11":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono12":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono13":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono14":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono15":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono16":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono17":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono18":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono19":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono20":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono21":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono22":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono23":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono24":"Incrementar la velocidad antes de que cierre la puerta",
+            "icono25":"Incrementar la velocidad antes de que cierre la puerta"
         },
 
         "alertasTextos":{
@@ -98,17 +121,18 @@
         },
 
         "super":{
-            "sup1":"Ayuda a evitar accidentes deteniendo el transporte a una distancia donde tengas visibilidad completa de las personas y te encuentres antes del paso peatonal.",
+            "sup1":"Antes de iniciar su viaje, todo operador deberá hacer una revisión de su unidad con base en la bitácora de viaje, asegurando que hará su recorrido completo con toda la seguridad, protegiendo su integridad y de los demás.",
             "sup2":"Recuerda: solo puedes ingresar al centro productivo si el encargado de seguridad te da la señal de entrada.",
             "sup3":"Al descender del vehículo recuerda siempre: poner el freno de estacionamiento; apagar el vehículo; retirar llaves y papeles; descender usando la técnica de tres puntos de apoyo; ir a zona de sanitización; y, por último, dirigirte a la zona segura.",
             "sup4":"Cumplir con las medidas de seguridad y colocar el bloqueador te ayudará a evitar situaciones inseguras.",
             "supspe":"Se debe reportar al encargado de seguridad si se encuentra algo extraño.",
             "sup5":"Tener conocimiento de todas las medidas de seguridad en el ingreso de los transportes garantiza tu seguridad y la de las personas a tu alrededor.",
             "sup6":"Al hacer la entrega para ir a desarmar, asegúrate (antes de iniciar el movimiento del vehículo) de que el encargado de seguridad se encuentre en la zona segura. No olvides ascender aplicando la técnica de los tres puntos de apoyo.",
-            "sup7a":"Antes de iniciar el movimiento:",
-            "sup7b":"Confirma que tu entorno es seguro, tanto frontal como lateral.",
-            "sup7c":"Apóyate en tus espejos retrovisores para visualizar al encargado de seguridad en la zona segura y para asegurarte de que no existan otros riesgos.",
-            "sup7d":"Enciende tus intermitentes y torretas para hacerte visible."
+            "sup7":"Antes de iniciar el movimiento:",
+            "sup8":"Confirma que tu entorno es seguro, tanto frontal como lateral.",
+            "sup9":"Apóyate en tus espejos retrovisores para visualizar al encargado de seguridad en la zona segura y para asegurarte de que no existan otros riesgos.",
+            "sup10":"Enciende tus intermitentes y torretas para hacerte visible.",
+            "sup11":"Enciende tus intermitentes y torretas para hacerte visible."
         }
 
         
