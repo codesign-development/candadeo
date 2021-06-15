@@ -265,12 +265,6 @@ function setData(data) {
     let vidSup4 = $("<p>" + data.super.sup4 + "</p>");
     let vidSpe = $("<p>" + data.super.supspe + "</p>");
     let vidSup5 = $("<p>" + data.super.sup5 + "</p>");
-    let vidSup6 = $("<p>" + data.super.sup6 + "</p>");
-    let vidSup7 = $("<p>" + data.super.sup7 + "</p>");
-    let vidSup8 = $("<p>" + data.super.sup8 + "</p>");
-    let vidSup9 = $("<p>" + data.super.sup9 + "</p>");
-    let vidSup10 = $("<p>" + data.super.sup10 + "</p>");
-    let vidSup11 = $("<p>" + data.super.sup11 + "</p>");
 
 
     $(".superVideo").html("");
@@ -280,12 +274,6 @@ function setData(data) {
     $("#superVideo4").append(vidSup4);
     $("#superVideoSpecial").append(vidSpe);
     $("#superVideo5").append(vidSup5);
-    $("#superVideo6").append(vidSup6);
-    $("#superVideo7").append(vidSup7);
-    $("#superVideo8").append(vidSup8);
-    $("#superVideo9").append(vidSup9);
-    $("#superVideo10").append(vidSup10);
-    $("#superVideo11").append(vidSup11);
 
     // Flechas textos
 
