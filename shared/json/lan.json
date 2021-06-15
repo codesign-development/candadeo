@@ -120,14 +120,14 @@
             "alerta23b":"(Estar atento en todo momento evita una acción insegura)."
         },
 
-        "super":{
-            "sup1":"Antes de iniciar su viaje, todo operador deberá hacer una revisión de su unidad con base en la bitácora de viaje, asegurando que hará su recorrido completo con toda la seguridad, protegiendo su integridad y de los demás.",
-            "sup2":"Recuerda: solo puedes ingresar al centro productivo si el encargado de seguridad te da la señal de entrada.",
-            "sup3":"Al descender del vehículo recuerda siempre: poner el freno de estacionamiento; apagar el vehículo; retirar llaves y papeles; descender usando la técnica de tres puntos de apoyo; ir a zona de sanitización; y, por último, dirigirte a la zona segura.",
-            "sup4":"Cumplir con las medidas de seguridad y colocar el bloqueador te ayudará a evitar situaciones inseguras.",
-            "supspe":"Se debe reportar al encargado de seguridad si se encuentra algo extraño.",
-            "sup5":"Tener conocimiento de todas las medidas de seguridad en el ingreso de los transportes garantiza tu seguridad y la de las personas a tu alrededor."
-        }
+      "super": {
+        "sup1": "Antes de iniciar su viaje, todo operador deberá hacer una revisión de su unidad con base en la bitácora de viaje, asegurando que hará su recorrido completo con toda la seguridad, protegiendo su integridad y de los demás.",
+        "sup2": "Recuerda: solo puedes ingresar al centro productivo si el encargado de seguridad te da la señal de entrada.",
+        "sup3": "Al descender del vehículo recuerda siempre: poner el freno de estacionamiento; apagar el vehículo; retirar llaves y papeles; descender usando la técnica de tres puntos de apoyo; ir a zona de sanitización; y, por último, dirigirte a la zona segura.",
+        "sup4": "Cumplir con las medidas de seguridad y colocar el bloqueador te ayudará a evitar situaciones inseguras.",
+        "supspe": "Se debe reportar al encargado de seguridad si se encuentra algo extraño.",
+        "sup5": "No se deben retirar los elementos de seguridad (bloqueador y seguro de volante) hasta que la reparación de la unidad haya concluido."
+      }
 
         
     },

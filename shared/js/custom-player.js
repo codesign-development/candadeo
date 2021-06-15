@@ -257,7 +257,7 @@ videoFive.addEventListener('play', (event) => {
   videoFive.addEventListener('timeupdate', (event) => {
 
 //     Pausa en reacción mala
-    if (event.target.currentTime >= 19 && event.target.currentTime <= 19.5) {
+    if (event.target.currentTime >= 33 && event.target.currentTime <= 33.5) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoFive.pause()
       videoFive.webkitExitFullscreen();
@@ -271,8 +271,8 @@ videoFive.addEventListener('play', (event) => {
       $(".superVideo").css("display", "none")
     } */
 
-    //Regreso a la situación original
-     if (event.target.currentTime >= 42 && event.target.currentTime <= 43) {
+    //Fin de video
+     if (event.target.currentTime >= 65 && event.target.currentTime <= 66) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoFive.pause()

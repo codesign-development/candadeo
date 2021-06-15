@@ -2,7 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\shared",
-    "\\shared\\js"
+    "\\shared\\js",
+    "\\shared\\json",
+    "\\shared\\video"
   ],
+  "SelectedNode": "\\shared\\video\\Video05-web.mp4",
   "PreviewInSolutionExplorer": false
 }
