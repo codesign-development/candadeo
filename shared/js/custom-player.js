@@ -93,7 +93,7 @@ video.addEventListener('play', (event) => {
    videoTwo.addEventListener('timeupdate', (event) => {
 
 //     Pausa en reacción mala
-     if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
+     if (event.target.currentTime >= 13 && event.target.currentTime <= 13.5) {
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoTwo.pause()
        videoTwo.webkitExitFullscreen();
@@ -107,8 +107,8 @@ video.addEventListener('play', (event) => {
       $(".superVideo").css("display", "none")
     } */
 
-     //Regreso a la situación original
-      if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+     //Pausa cuando termine el video
+      if (event.target.currentTime >= 31 && event.target.currentTime <= 32) {
         console.log("yes")
         window.localStorage.setItem("currentTime", event.target.currentTime)
         videoTwo.pause()
@@ -162,7 +162,7 @@ videoThree.addEventListener('play', (event) => {
       $(".superVideo").css("display", "none")
     } */
 
-    //Regreso a la situación original
+    //Pausa cuando termine el video
      if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
@@ -203,7 +203,7 @@ videoFour.addEventListener('play', (event) => {
   videoFour.addEventListener('timeupdate', (event) => {
 
 //     Pausa en reacción mala
-    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
+    if (event.target.currentTime >= 26.5 && event.target.currentTime <= 27) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoFour.pause()
       videoFour.webkitExitFullscreen();
@@ -212,13 +212,13 @@ videoFour.addEventListener('play', (event) => {
       audioTrivia()
     }
 
-   /* //Escondido del super antes del final del video solo activar cuando se necesite
-    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
-      $(".superVideo").css("display", "none")
-    } */
+    //Escondido del super antes del final del video solo activar cuando se necesite
+    //if (event.target.currentTime >= 58 && event.target.currentTime <= 59) {
+    //  $(".superVideo").css("display", "none")
+    //} 
 
-    //Regreso a la situación original
-     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+    //Pausa cuando termine el video
+     if (event.target.currentTime >= 60 && event.target.currentTime <= 61) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoFour.pause()
@@ -257,7 +257,7 @@ videoFive.addEventListener('play', (event) => {
   videoFive.addEventListener('timeupdate', (event) => {
 
 //     Pausa en reacción mala
-    if (event.target.currentTime >= 18 && event.target.currentTime <= 18.5) {
+    if (event.target.currentTime >= 19 && event.target.currentTime <= 19.5) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoFive.pause()
       videoFive.webkitExitFullscreen();
@@ -272,7 +272,7 @@ videoFive.addEventListener('play', (event) => {
     } */
 
     //Regreso a la situación original
-     if (event.target.currentTime >= 38 && event.target.currentTime <= 39) {
+     if (event.target.currentTime >= 42 && event.target.currentTime <= 43) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoFive.pause()
