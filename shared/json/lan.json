@@ -7,7 +7,7 @@
         },
 
         "curso":{
-            "nameCurso": "Procedimiento para la operación de Mantenimiento a los Transportes"
+            "nameCurso": "El proceso de mantenimiento de transporte en taller"
         },
 
         "bienvenida":{
@@ -27,9 +27,8 @@
         "v1": "Una falla en tu vehículo",
         "v2": "Designación de mecánico",
         "v3": "Maestro asegura vehículo en la zona a realizar la reparación",
-        "v4": "Mecánico realiza el diagnostico y reparación",
+        "v4": "Mecánico realiza el diagnóstico y reparación",
         "v5": "Retira cubierta y bloqueador",
-        "v6": "Entrega de llave y documentos para ascenso a la unidad",
         "v7": "Avanzar la unidad",
         "v8": "Avanzar la unidad",
         "v9": "Avanzar la unidad",

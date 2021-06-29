@@ -108,7 +108,7 @@ video.addEventListener('play', (event) => {
     } */
 
      //Pausa cuando termine el video
-      if (event.target.currentTime >= 57 && event.target.currentTime <= 57.1) {
+      if (event.target.currentTime >= 56 && event.target.currentTime <= 57) {
         console.log("yes")
         window.localStorage.setItem("currentTime", event.target.currentTime)
         videoTwo.pause()
