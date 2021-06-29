@@ -336,7 +336,7 @@ button:active {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
 }
@@ -354,14 +354,14 @@ button:active {
 }
 /* Icon */
 .icon{
-    width: 200px;
+    width: 270px;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
-    height: 200px;
+    height: 270px;
     margin: 10px;
 }
 
@@ -375,13 +375,13 @@ button:active {
     width: 100%;
     min-height: 80px;
     border-radius: 10px;
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     -webkit-box-shadow: 0px -8px 40px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px -8px 40px 1px rgba(0,0,0,0.75);
     box-shadow: 0px -8px 40px 1px rgba(0,0,0,0.75);
     position: absolute;
-    bottom: -15px;
+    bottom: 0px;
 }
 
 .txtIcon>p {

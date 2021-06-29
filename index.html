@@ -35,7 +35,7 @@
                     <div class="point hidden"></div>
                     <div class="point hidden"></div>
                     <div class="point hidden"></div>
-                    <div class="point hidden"></div>   
+                    <div class="point hidden"></div>
                     <div class="point hidden"></div>
                 </div>
                 <div class="line"></div>
@@ -150,7 +150,7 @@
                     <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
                     <div class="trivia d-none">
                         <div class="instrucciones">
-                            <div class="txt-inst">
+                            <div class="txt-inst" id="inst1">
                                 <p>Selecciona la respuesta de la acción incorrecta realizada.</p>
                             </div>
                         </div>
@@ -204,7 +204,7 @@
                     <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
                     <div class="trivia d-none">
                         <div class="instrucciones">
-                            <div class="txt-inst">
+                            <div class="txt-inst" id="inst2">
                                 <p>Selecciona la respuesta de la acción incorrecta realizada.</p>
                             </div>
                         </div>
@@ -235,7 +235,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="btn-next d-none" data-seek="18" onclick="continueVideo(this)">
+                    <div class="btn-next d-none" data-seek="33" onclick="continueVideo(this)">
                         <p>Continuar</p>
                     </div>
                     <div id="superVideo2" class="superVideo"></div>
@@ -259,33 +259,34 @@
                     <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
                     <div class="trivia d-none">
                         <div class="instrucciones">
-                            <div class="txt-inst">
+                            <div class="txt-inst" id="inst3">
                                 <p>Selecciona la respuesta de la acción incorrecta realizada.</p>
                             </div>
                         </div>
                         <div class="iconCont" id="iconCont3">
-                            <div class="icon bad" onclick="bad()">
-                                <div class="imgIcon badIcon" id="icon7">
+                            <div class="icon good" onclick="good()">
+                                <div class="imgIcon goodIcon" id="icon7">
                                     <img src="./shared/img/iconsTrivia/icono07.svg">
                                 </div>
-                                <div class="txtIcon badIcon txtIcon7">
+                                <div class="txtIcon goodIcon txtIcon7">
                                     
                                 </div>
                             </div>    
-                            <div class="icon good" onclick="good()">
-                                <div class="imgIcon goodIcon" id="icon8">
+                            <div class="icon bad" onclick="bad()">
+                                <div class="imgIcon badIcon" id="icon8">
                                     <img src="./shared/img/iconsTrivia/icono08.svg">
                                 </div>
-                                <div class="txtIcon goodIcon txtIcon8">
+                                <div class="txtIcon badIcon txtIcon8">
                                     
                                 </div>
                             </div> 
                         </div>
                     </div>
-                    <div class="btn-next d-none" data-seek="31" onclick="continueVideo(this)">
+                    <div class="btn-next d-none" data-seek="23" onclick="continueVideo(this)">
                         <p>Continuar</p>
                     </div>
                     <div id="superVideo3" class="superVideo"></div>
+                    <div id="superVideoSpecial" class="superVideo2"></div>
                     <div class="vidSig">
                         <div class="sig"></div>
                     </div>
@@ -305,7 +306,7 @@
                     <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
                     <div class="trivia d-none">
                         <div class="instrucciones">
-                            <div class="txt-inst">
+                            <div class="txt-inst" id="inst4">
                                 <p>Selecciona la respuesta de la acción incorrecta realizada.</p>
                             </div>
                         </div>
@@ -351,7 +352,7 @@
                     <div class="btn-reset d-none" data-seek="0" onclick="resetVideo(this)"></div>
                     <div class="trivia d-none">
                         <div class="instrucciones">
-                            <div class="txt-inst">
+                            <div class="txt-inst" id="inst5">
                                 <p>Selecciona la respuesta de la acción incorrecta realizada.</p>
                             </div>
                         </div>

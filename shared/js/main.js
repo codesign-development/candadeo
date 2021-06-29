@@ -80,7 +80,7 @@ function scrollToNextItem(e) {
 
     
 
-    if (idActual == "despedida") {
+    /* if (idActual == "despedida") {
 
         if (!isActiveLastSlide) {
             let SD = window.parent
@@ -90,7 +90,7 @@ function scrollToNextItem(e) {
             SD.SetPassed()
             isActiveLastSlide = true
         }
-    }
+    } */
 
     if (idActual.includes("video-cont") || idActual.includes("webgl") || idActual.includes("examen")) {
         if ($("#" + idActual).hasClass("visto")) {
@@ -231,7 +231,7 @@ nextScroll.addEventListener('click', () => {
 
 
 
-finalizar.addEventListener('click', () => {
+/* finalizar.addEventListener('click', () => {
 
     
     let SD = window.parent
@@ -248,7 +248,7 @@ finalizar.addEventListener('click', () => {
 
     //Recarga el documento al inicio al detectar el último div nulo.
     // document.location.reload();
-});
+}); */
 
 // Unactive dots
 prevScroll.addEventListener('click', () => {

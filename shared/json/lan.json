@@ -13,7 +13,7 @@
         "bienvenida":{
             "bien1": "¡Te damos la bienvenida!",
             "bien2": "En Grupo Bimbo tu seguridad es primero.",
-            "bien3": "En este curso te enseñaremos los lineamientos de seguridad en el ingreso de los transportes a un centro productivo o a un centro de distribución Grupo Bimbo."
+            "bien3": "En este curso, te mostraremos las medidas de seguridad que debes seguir para prevenir accidentes y situaciones peligrosas."
         },
 
         "despedida":{
@@ -49,7 +49,11 @@
         },
 
         "txtTrivia":{
-            "instru":"Selecciona la acción correcta para esta situación.",
+            "instru1":"¿Hacer la revisión de tu vehículo te ayuda a...?",
+            "instru2":"¿Cuál es el equipo de protección correcto y completo para el maestro en turno?",
+            "instru3":"¿Cuál es el procedimiento correcto para asegurar un vehículo en el taller?",
+            "instru4":"¿Por qué es importante mantener en resguardo las llaves del vehículo?",
+            "instru5":"¿Cuál es el momento correcto para retirar los dispositivos de seguridad?",
             "btnConti":"Continuar"
         },
 
@@ -65,20 +69,7 @@
         "icono9": "Para evitar riesgos al moverse sin autorización",
         "icono10": "Para que no se pierdan durante el proceso de reparación",
         "icono11": "Terminando la reparación",
-        "icono12": "Cuando el encargado de taller haga la entrega del vehículo de manera formal cuando la reparación haya concluido de manera satisfactoria",
-        "icono13": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono14": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono15": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono16": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono17": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono18": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono19": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono20": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono21": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono22": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono23": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono24": "Incrementar la velocidad antes de que cierre la puerta",
-        "icono25": "Incrementar la velocidad antes de que cierre la puerta"
+        "icono12": "Cuando el encargado de taller haga la entrega del vehículo de manera formal cuando la reparación haya concluido de manera satisfactoria"
       },
 
         "alertasTextos":{
@@ -122,11 +113,17 @@
 
       "super": {
         "sup1": "Antes de iniciar su viaje, todo operador deberá hacer una revisión de su unidad con base en la bitácora de viaje, asegurando que hará su recorrido completo con toda la seguridad, protegiendo su integridad y de los demás.",
-        "sup2": "Recuerda: solo puedes ingresar al centro productivo si el encargado de seguridad te da la señal de entrada.",
-        "sup3": "Al descender del vehículo recuerda siempre: poner el freno de estacionamiento; apagar el vehículo; retirar llaves y papeles; descender usando la técnica de tres puntos de apoyo; ir a zona de sanitización; y, por último, dirigirte a la zona segura.",
-        "sup4": "Cumplir con las medidas de seguridad y colocar el bloqueador te ayudará a evitar situaciones inseguras.",
-        "supspe": "Se debe reportar al encargado de seguridad si se encuentra algo extraño.",
-        "sup5": "No se deben retirar los elementos de seguridad (bloqueador y seguro de volante) hasta que la reparación de la unidad haya concluido."
+        "sup2": "El maestro de turno seleccionará al mecánico de acuerdo con su rol de trabajo, asegurando que cuente con su equipo de protección adecuado y en buenas condiciones para desarrollar la reparación del transporte.",
+        "sup3a": "Para ayudar a evitar accidentes:",
+        "sup3b": "retira la llave,",
+        "sup3c": "coloca la funda de protección en el volante,",
+        "sup3d": "desciende de la unidad usando los tres puntos de apoyo, y",
+        "sup3e": "coloca el bloqueador en la llanta delantera izquierda.",
+        "sup4a": "Por seguridad, solo el jefe de taller puede retirar la llave del gabinete asignado para su ubicación.",
+        "sup4b": "Realizar la reparación con calidad y en el tiempo adecuado contribuye a la eficiencia en la operación.",
+        "supspe": "Mejor práctica.",
+        "sup5a": "No se deben retirar los elementos de seguridad (bloqueador y seguro de volante) hasta que la reparación de la unidad haya concluido.",
+        "sup5b": "No se deberá usar la unidad hasta que el encargado de taller haya entregado el vehículo de manera formal al operador de transportes o movedor de patio."
       }
 
         

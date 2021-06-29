@@ -134,7 +134,11 @@ function setData(data) {
 
 //    Textos de trivia
 
-    let trivInstru = $("<p>" + data.txtTrivia.instru + "</p>");
+    let trivInstru1 = $("<p>" + data.txtTrivia.instru1 + "</p>");
+    let trivInstru2 = $("<p>" + data.txtTrivia.instru2 + "</p>");
+    let trivInstru3 = $("<p>" + data.txtTrivia.instru3 + "</p>");
+    let trivInstru4 = $("<p>" + data.txtTrivia.instru4 + "</p>");
+    let trivInstru5 = $("<p>" + data.txtTrivia.instru5 + "</p>");
     let riesgo1 = $("<p>" + data.iconosTextos.icono1 + "</p>");
     let riesgo2 = $("<p>" + data.iconosTextos.icono2 + "</p>");
     let riesgo3 = $("<p>" + data.iconosTextos.icono3 + "</p>");
@@ -163,7 +167,11 @@ function setData(data) {
     let btnCont = $("<p>" + data.txtTrivia.btnConti + "</p>");
 
     $(".txt-inst").html("");
-    $(".txt-inst").append(trivInstru);
+    $("#inst1").append(trivInstru1);
+    $("#inst2").append(trivInstru2);
+    $("#inst3").append(trivInstru3);
+    $("#inst4").append(trivInstru4);
+    $("#inst5").append(trivInstru5);
     $(".btn-next").html("");
     $(".btn-next").append(btnCont);
     $(".txtIcon").html("");
@@ -261,13 +269,14 @@ function setData(data) {
 
     let vidSup1 = $("<p>" + data.super.sup1 + "</p>");
     let vidSup2 = $("<p>" + data.super.sup2 + "</p>");
-    let vidSup3 = $("<p>" + data.super.sup3 + "</p>");
-    let vidSup4 = $("<p>" + data.super.sup4 + "</p>");
+    let vidSup3 = $("<p>" + data.super.sup3a + "<ul>" + "<li>" + data.super.sup3b + "</li>" + "<li>" + data.super.sup3c + "</li>" + "<li>" + data.super.sup3d + "</li>" + "<li>" + data.super.sup3e + "</li>" + "</ul>" + "</p>");
+    let vidSup4 = $("<ul>" + "<li>" + data.super.sup4a + "</li>"  +  "<li>" + data.super.sup4b + "</li>" + "</ul>");
     let vidSpe = $("<p>" + data.super.supspe + "</p>");
-    let vidSup5 = $("<p>" + data.super.sup5 + "</p>");
+    let vidSup5 = $("<ul>" + "<li>" + data.super.sup5a + "</li>"  +  "<li>" + data.super.sup5b + "</li>" + "</ul>");
 
 
     $(".superVideo").html("");
+    $(".superVideo2").html("");
     $("#superVideo1").append(vidSup1);
     $("#superVideo2").append(vidSup2);
     $("#superVideo3").append(vidSup3);
