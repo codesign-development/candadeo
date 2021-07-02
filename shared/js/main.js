@@ -510,6 +510,7 @@ const continueVideo = (e) => {
     $(".badIcon").css("background-color","#0c2999")
     $(".iconCont").css("background-color","")
     $(".superVideo").css("display","block")
+    $("#superVideo5").css("display","none")
     $("#superVideoSpecial").css("display","none")
     resetGameAlert ()
     
