@@ -1020,11 +1020,15 @@ button:active {
     }
 
     .dos img {
-        width: 20%;
+        width: 28%;
+    }
+    .dos {
+        bottom: -154px;
+        left: -54px;
     }
     .instrucciones {
         width: 85%;
-        font-size: 1.8vw;
+        font-size: 1.5vw;
     }
 
     .icon {
@@ -1032,18 +1036,21 @@ button:active {
     }
 
     .imgIcon {
-        width: 60%;
-        height: 48%;
+        width: 56%;
+        height: 40%;
         bottom: 20px;
     }
+    .imgIcon>img {
+        width: 36%;
+    }
     .btn-reset {
-        width: 60px;
-        height: 60px;
+        width: 52px;
+        height: 52px;
     }
     .txtIcon {
         bottom: -8px;
         min-height: 40px;
-        font-size: 1.3vw;
+        font-size: 1.2vw;
     }
     .btn-next {
         bottom: 3%;
@@ -1095,9 +1102,19 @@ button:active {
     }
 
     .uno {
-        bottom: -10px;
+        bottom: -62px;
+        right: -184px;
     }
-    
+    .uno img {
+        width: 18%;
+    }
+    .dos {
+        bottom: -116px;
+        left: -48px;
+    }
+    .dos img {
+        width: 22%;
+    }
     .instrucciones {
         width: 90%;
         top: 14%;
@@ -1121,7 +1138,7 @@ button:active {
         font-size: 3vw;
     }
     .superVideo {
-       bottom: 20%;
+        bottom: 6%;
     }
     .btn-reset {
         width: 52px;
