@@ -277,6 +277,11 @@ videoFive.addEventListener('play', (event) => {
       $(".superVideo").css("display", "none")
     }
 
+    //Mostrado del super asimetrico
+    if (event.target.currentTime >= 44 && event.target.currentTime <= 45) {
+      $(".superVideo").css("display", "block")
+    }
+
     //Fin de video
      if (event.target.currentTime >= 85 && event.target.currentTime <= 86) {
        console.log("yes")
