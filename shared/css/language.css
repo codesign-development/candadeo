@@ -222,13 +222,16 @@
 @media only screen and (max-width: 1440px){
 
 .uno {
-        bottom: -110px;
-        right: -245px;
+     bottom: -110px;
+     right: -245px;
 }
     
- .dos {
-        bottom: -90px;
-        left: -250px;
+.dos {
+    bottom: -192px;
+    left: -56px;
+}
+.dos img {
+    width: 38%;
 }
 
 }
