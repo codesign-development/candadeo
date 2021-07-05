@@ -153,7 +153,7 @@ videoThree.addEventListener('play', (event) => {
       videoThree.pause()
       videoThree.webkitExitFullscreen();
       $(".trivia").removeClass("d-none")
-      shuffleElements("#iconCont2")
+      shuffleElements("#iconCont3")
       audioTrivia()
     }
 
@@ -214,7 +214,7 @@ videoFour.addEventListener('play', (event) => {
       videoFour.pause()
       videoFour.webkitExitFullscreen();
       $(".trivia").removeClass("d-none")
-      shuffleElements("#iconCont2")
+      shuffleElements("#iconCont4")
       audioTrivia()
     }
 
@@ -268,7 +268,7 @@ videoFive.addEventListener('play', (event) => {
       videoFive.pause()
       videoFive.webkitExitFullscreen();
       $(".trivia").removeClass("d-none")
-      shuffleElements("#iconCont2")
+      shuffleElements("#iconCont5")
       audioTrivia()
     }
 
