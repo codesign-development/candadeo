@@ -474,8 +474,8 @@ function good(){
         $(".goodIcon").css("background-color","#6bc310")
         $(".badIcon").css("background-color","rgb(255, 0, 0)")
         $(".icon").css("pointer-events", "none")
-        $(".btn-next").removeClass("d-none")
-        audioGood()
+        showSuper()
+        audioBad()
     }
 }
 
@@ -485,7 +485,7 @@ function bad() {
         $(".goodIcon").css("background-color","#6bc310")
         $(".badIcon").css("background-color","rgb(255, 0, 0)")
         $(".icon").css("pointer-events", "none")
-        $(".btn-next").removeClass("d-none")
+        showSuper()
         audioBad()
     }
 }
@@ -509,8 +509,9 @@ const continueVideo = (e) => {
     $(".goodIcon").css("background-color","#0c2999")
     $(".badIcon").css("background-color","#0c2999")
     $(".iconCont").css("background-color","")
-    $(".superVideo").css("display","block")
-    $("#superVideo5").css("display","none")
+    $(".superWrap").addClass("d-none")
+    $(".btn-next").addClass("refreshBlock")
+    // $("#superVideo5").css("display","none")
     $("#superVideoSpecial").css("display","none")
     resetGameAlert ()
     
@@ -529,11 +530,12 @@ const resetVideo = (e) => {
     $(".iconCont").css("background-color","")
     $(".trivia").addClass("d-none")
     $(".btn-next").addClass("d-none")
+    $(".btn-next").addClass("refreshBlock")
     $(".vidSig").css("display", "none")
     $(".vidBad").css("background-position", "0px")
     $(".vidGood").css("background-position", "0px")
     $(".icon").css("pointer-events", "all")
-    $(".superVideo").css("display", "none")
+    $(".superWrap").addClass("d-none")
     $('#superVideoSpecial').css("display","none")
     $(".instruccion2").addClass("d-none")
     resetGameAlert ()
@@ -565,3 +567,23 @@ function hackSlides(){
      $(".child").addClass("visto")
     $(".child").removeClass("novisto")
  }
+
+ function showSuper(){
+
+    setTimeout(function (){
+
+        $(".superWrap").removeClass("d-none")
+        $(".btn-next").removeClass("d-none")
+        unlockBtn()
+    },2000);
+    
+ }
+
+ function unlockBtn(){
+
+    setTimeout(function () {
+        
+        $(".btn-next").removeClass("refreshBlock");
+
+    }, 5000);
+}

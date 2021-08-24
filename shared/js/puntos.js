@@ -160,14 +160,25 @@ let progressCount = 0;
     $(".lastCheck").click(function clearCheck() {
 		let lastCheck = $(".lastCheck")
 
-        if($(lastCheck).hasClass("lastCheck")){
+        if( lastCheck.hasClass("lastCheck") || lastCheck.hasClass("short") ){
+  
+            setTimeout(function(){ 
 
-            $(".btn-next").removeClass("d-none");
-            console.log('true');
-        }
-        else{
+                $(".btn-next").removeClass("d-none")
+                $(".superWrap").removeClass("d-none")
+                unlockBtn()
+                console.log("short")
 
-            console.log('false');
+             }, 5000);
+        } else{
+            setTimeout(function(){ 
+
+                $(".btn-next").removeClass("d-none")
+                $(".superWrap").removeClass("d-none")
+                unlockBtn()
+                console.log("long")
+
+             }, 10000);
         }
     });
 
@@ -191,6 +202,15 @@ let progressCount = 0;
 		chunkDad.removeClass("clearChunk")
 		chunkDad2.removeClass("clearChunk")
 	}
+
+    function unlockBtn(){
+
+        setTimeout(function () {
+            
+            $(".btn-next").removeClass("refreshBlock");
+
+        }, 5000);
+    }
     
 
 

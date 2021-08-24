@@ -55,7 +55,7 @@ video.addEventListener('play', (event) => {
        //Overlay de siguiente
        $(".vidSig").css("display", "block")
        //Oculta texto de apoyo
-       $(".superVideo").css("display", "none")
+       $(".superWrap").addClass("d-none")
        //Activa Flechas
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
@@ -63,7 +63,6 @@ video.addEventListener('play', (event) => {
        //Oculta botones de continuar y reset
        $('.btn-next').addClass("d-none")
        $('.btn-reset').addClass("d-none")
-       $(".superVideo").css("display", "none")
        $(".icon").css("pointer-events", "all")
        $('#derArrow').addClass("active")
        derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
@@ -114,13 +113,12 @@ video.addEventListener('play', (event) => {
         videoTwo.pause()
         videoTwo.webkitExitFullscreen();
         $(".vidSig").css("display", "block")
-        $(".superVideo").css("display", "none")
+        $(".superWrap").addClass("d-none")
         $('#izqArrow').removeClass("unactive")
         $('#derArrow').removeClass("unactive")
         $('#izqArrow').addClass("active")
         $('.btn-reset').addClass("d-none")
         $(".icon").css("pointer-events", "all")
-        $(".superVideo").css("display", "none")
         $('#derArrow').addClass("active")
         $('.btn-next').addClass("d-none")
         derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
@@ -159,7 +157,7 @@ videoThree.addEventListener('play', (event) => {
 
    //Escondido del super antes del final del video solo activar cuando se necesite
     if (event.target.currentTime >= 58 && event.target.currentTime <= 59) {
-      $(".superVideo").css("display", "none")
+      $(".superWrap").addClass("d-none")
     }
 
     //Prendido del Super Especial
@@ -174,13 +172,12 @@ videoThree.addEventListener('play', (event) => {
        videoThree.pause()
        videoThree.webkitExitFullscreen();
        $(".vidSig").css("display", "block")
-       $(".superVideo").css("display", "none")
+       $(".superWrap").addClass("d-none")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
        $('#izqArrow').addClass("active")
        $('.btn-reset').addClass("d-none")
        $(".icon").css("pointer-events", "all")
-       $(".superVideo").css("display", "none")
        $("#superVideoSpecial").css("display", "none")
        $('#derArrow').addClass("active")
        $('.btn-next').addClass("d-none")
@@ -230,13 +227,12 @@ videoFour.addEventListener('play', (event) => {
        videoFour.pause()
        videoFour.webkitExitFullscreen();
        $(".vidSig").css("display", "block")
-       $(".superVideo").css("display", "none")
+       $(".superWrap").addClass("d-none")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
        $('#izqArrow').addClass("active")
        $('.btn-reset').addClass("d-none")
        $(".icon").css("pointer-events", "all")
-       $(".superVideo").css("display", "none")
        $('#derArrow').addClass("active")
        $('.btn-next').addClass("d-none")
        derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
@@ -274,7 +270,7 @@ videoFive.addEventListener('play', (event) => {
 
    //Escondido del super antes del final del video solo activar cuando se necesite
     if (event.target.currentTime >= 76 && event.target.currentTime <= 77) {
-      $(".superVideo").css("display", "none")
+      $(".superWrap").addClass("d-none")
     }
 
     //Mostrado del super asimetrico
@@ -289,13 +285,12 @@ videoFive.addEventListener('play', (event) => {
        videoFive.pause()
        videoFive.webkitExitFullscreen();
        $(".vidSig").css("display", "block")
-       $(".superVideo").css("display", "none")
+       $(".superWrap").addClass("d-none")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
        $('#izqArrow').addClass("active")
        $('.btn-reset').addClass("d-none")
        $(".icon").css("pointer-events", "all")
-       $(".superVideo").css("display", "none")
        $('#derArrow').addClass("active")
        $('.btn-next').addClass("d-none")
        derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
