@@ -279,8 +279,6 @@ function badRes (e){
 function resetExamen(){
     let retro = 0
     if(count == 1){
-        //msjExam.innerHTML = `<p>Puedes comenter un máxmimo de 2 errores</p>`
-       //console.log(msjExam)
        firstStrike()
     }
 
@@ -291,21 +289,19 @@ function resetExamen(){
     if(count >= 3){
 
         thirdStrike()
-        retro = currentSlide-9
+        retro = currentSlide-7
         content.scrollBy({
             left: -childWidth * retro,
             top: 0,
             behavior: 'auto'
         })
         console.log('reset examen')
-        //msjExam.innerHTML = `<p>Elige cuál de estas escenas es la correcta.</p>`
         count = 0
+        console.log(retro);
         
-        console.log(`slide:${currentSlide}`)
-        
-        currentSlide = 9
-        counter = 9
-        //console.log(retro)
+
+        currentSlide = 7
+        counter = 7
         blockExamArrows()
         answerClear()
         strikeReset()
