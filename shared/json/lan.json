@@ -7,7 +7,7 @@
         },
 
         "curso":{
-            "nameCurso": "El proceso de mantenimiento de transporte en taller"
+            "nameCurso": "Proceso de bloqueo y candadeo de mantenimiento de transporte en taller"
         },
 
         "bienvenida":{
@@ -24,7 +24,7 @@
         },
 
       "titulos": {
-        "v1": "Una falla en tu vehículo",
+        "v1": "Revisa tu vehículo antes de iniciar tu viaje",
         "v2": "Designación de mecánico",
         "v3": "Maestro asegura vehículo en la zona a realizar la reparación",
         "v4": "Mecánico realiza el diagnóstico y reparación",
@@ -120,7 +120,7 @@
         "sup3e": "coloca el bloqueador en la llanta delantera izquierda.",
         "sup4a": "Por seguridad, solo el jefe de taller puede retirar la llave del gabinete asignado para su ubicación.",
         "sup4b": "Realizar la reparación con calidad y en el tiempo adecuado contribuye a la eficiencia en la operación.",
-        "supspe": "Mejor práctica.",
+        "supspe": "Una buena practica.",
         "sup5a": "No se deben retirar los elementos de seguridad (bloqueador y seguro de volante) hasta que la reparación de la unidad haya concluido.",
         "sup5b": "No se deberá usar la unidad hasta que el encargado de taller haya entregado el vehículo de manera formal al operador de transportes o movedor de patio."
       }
