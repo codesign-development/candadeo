@@ -269,7 +269,7 @@ function setData(data) {
 
     let vidSup1 = $("<p>" + data.super.sup1 + "</p>");
     let vidSup2 = $("<p>" + data.super.sup2 + "</p>");
-    let vidSup3 = $("<p>" + data.super.sup3a + "<ul>" + "<li>" + data.super.sup3b + "</li>" + "<li>" + data.super.sup3c + "</li>" + "<li>" + data.super.sup3d + "</li>" + "<li>" + data.super.sup3e + "</li>" + "</ul>" + "</p>");
+    let vidSup3 = $("<p>" + data.super.sup3a + "<ul>" + "<li>" + data.super.sup3b + "</li>" + "<li>" + data.super.sup3c + "</li>" + "<li>" + data.super.sup3d + "</li>" + "<li>" + data.super.sup3e + "</li>" + "<li>" + data.super.sup3f + "</li>" + "</ul>" + "</p>");
     let vidSup4 = $("<ul>" + "<li>" + data.super.sup4a + "</li>"  +  "<li>" + data.super.sup4b + "</li>" + "</ul>");
     let vidSpe = $("<p>" + data.super.supspe + "</p>");
     let vidSup5 = $("<ul>" + "<li>" + data.super.sup5a + "</li>"  +  "<li>" + data.super.sup5b + "</li>" + "</ul>");
