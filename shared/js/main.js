@@ -471,7 +471,7 @@ function good(){
         $(".badIcon").css("background-color","rgb(255, 0, 0)")
         $(".icon").css("pointer-events", "none")
         showSuper()
-        audioBad()
+        audioGood()
     }
 }
 
