@@ -470,6 +470,7 @@ function good(){
         $(".goodIcon").css("background-color","#6bc310")
         $(".badIcon").css("background-color","rgb(255, 0, 0)")
         $(".icon").css("pointer-events", "none")
+        $(".btn-reset").addClass("refreshBlock")
         showSuper()
         audioGood()
     }
@@ -481,6 +482,7 @@ function bad() {
         $(".goodIcon").css("background-color","#6bc310")
         $(".badIcon").css("background-color","rgb(255, 0, 0)")
         $(".icon").css("pointer-events", "none")
+        $(".btn-reset").addClass("refreshBlock")
         showSuper()
         audioBad()
     }
@@ -570,6 +572,7 @@ function hackSlides(){
 
         $(".superWrap").removeClass("d-none")
         $(".btn-next").removeClass("d-none")
+        $(".btn-reset").removeClass("refreshBlock")
         unlockBtn()
     },2000);
     

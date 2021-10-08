@@ -155,32 +155,38 @@ let progressCount = 0;
 
     }
 
-    // Se muestra el Boton de continuar cuando todos los iconos ya han sido clickeados
+     // Se muestra el Boton de continuar y el super con retroalimentacion cuando todos los iconos ya han sido clickeados
 
-    $(".lastCheck").click(function clearCheck() {
-		let lastCheck = $(".lastCheck")
+     $(".lastCheck").click(function clearCheck() {
+        $(".btn-reset").addClass("refreshBlock")
+        delaySuper( $(this) );  
 
-        if( lastCheck.hasClass("lastCheck") || lastCheck.hasClass("short") ){
-  
+    });
+
+    function delaySuper(lastAlert){
+
+        if( lastAlert.hasClass("short") ){
+            console.log("short")
             setTimeout(function(){ 
 
                 $(".btn-next").removeClass("d-none")
                 $(".superWrap").removeClass("d-none")
+                $(".btn-reset").removeClass("refreshBlock");
                 unlockBtn()
-                console.log("short")
 
              }, 5000);
         } else{
+            console.log("long")
             setTimeout(function(){ 
-
+                
                 $(".btn-next").removeClass("d-none")
                 $(".superWrap").removeClass("d-none")
+                $(".btn-reset").removeClass("refreshBlock");
                 unlockBtn()
-                console.log("long")
 
              }, 10000);
         }
-    });
+    }
 
 	//Resetea a su estado original el timeline
 
