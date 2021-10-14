@@ -231,7 +231,7 @@ nextScroll.addEventListener('click', () => {
 
 
 
-finalizar.addEventListener('click', () => {
+/* finalizar.addEventListener('click', () => {
 
     
     let SD = window.parent
@@ -248,9 +248,9 @@ finalizar.addEventListener('click', () => {
 
     //Recarga el documento al inicio al detectar el último div nulo.
     // document.location.reload();
-});
+}); */
 
-/* // Unactive dots
+// Unactive dots
 prevScroll.addEventListener('click', () => {
     bullets[currentSlide - 1].classList.remove('checked');
     currentSlide -= 1;
@@ -259,7 +259,7 @@ prevScroll.addEventListener('click', () => {
         prevScroll.disabled = true;
         console.log("desahibilitado principio");
     }
-}); */
+});
 
 //Examen
 
@@ -510,7 +510,7 @@ const continueVideo = (e) => {
     $(".superWrap").addClass("d-none")
     $(".btn-next").addClass("refreshBlock")
     // $("#superVideo5").css("display","none")
-    $("#superVideoSpecial").css("display","none")
+    $('#superVideoSpecial').css("display","none")
     resetGameAlert ()
     
 }
@@ -535,6 +535,8 @@ const resetVideo = (e) => {
     $(".icon").css("pointer-events", "all")
     $(".superWrap").addClass("d-none")
     $('#superVideoSpecial').css("display","none")
+    $('.superSpecialWrap').css("display","none")
+    $('.superVideo').css("display","none")
     $(".instruccion2").addClass("d-none")
     resetGameAlert ()
     
