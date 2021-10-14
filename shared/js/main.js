@@ -250,7 +250,7 @@ finalizar.addEventListener('click', () => {
     // document.location.reload();
 });
 
-// Unactive dots
+/* // Unactive dots
 prevScroll.addEventListener('click', () => {
     bullets[currentSlide - 1].classList.remove('checked');
     currentSlide -= 1;
@@ -259,7 +259,7 @@ prevScroll.addEventListener('click', () => {
         prevScroll.disabled = true;
         console.log("desahibilitado principio");
     }
-});
+}); */
 
 //Examen
 
