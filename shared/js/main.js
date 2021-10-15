@@ -79,8 +79,8 @@ function scrollToNextItem(e) {
     console.log(idActual);
 
     
-
-    if (idActual == "despedida") {
+    //Comentar para productivo
+    /* if (idActual == "despedida") {
 
         if (!isActiveLastSlide) {
             let SD = window.parent
@@ -90,7 +90,7 @@ function scrollToNextItem(e) {
             SD.SetPassed()
             isActiveLastSlide = true
         }
-    }
+    } */
 
     if (idActual.includes("video-cont") || idActual.includes("webgl") || idActual.includes("examen")) {
         if ($("#" + idActual).hasClass("visto")) {
