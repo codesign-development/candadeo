@@ -870,6 +870,16 @@ button:active {
         font-size: 1.3em;
     }
 
+    .exTitle1 {
+        top: 14%;
+        font-size: 1.3em;
+    }
+
+    .exTitle2 {
+        top: 14%;
+        font-size: 1.3em;
+    }
+
     .exSig {
         bottom: 9%;
         font-size: 1.3em;
@@ -904,6 +914,12 @@ button:active {
         font-size: 1.5vw;
     }
     .exTitle {
+        font-size: 1.3em;
+    }
+    .exTitle1 {
+        font-size: 1.3em;
+    }
+    .exTitle2 {
         font-size: 1.3em;
     }
     .exSig {
@@ -958,6 +974,12 @@ button:active {
     }
     
     .exTitle {
+        font-size: 1em;
+    }
+    .exTitle1 {
+        font-size: 1em;
+    }
+    .exTitle2 {
         font-size: 1em;
     }
 
