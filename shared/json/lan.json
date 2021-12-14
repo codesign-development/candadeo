@@ -24,9 +24,9 @@
         },
 
       "titulos": {
-        "v1": "Revisa tu vehiculo antes de iniciar tu viaje",
-        "v2": "Designación de mecánico",
-        "v3": "Maestro asegura vehículo en la zona a realizar la reparación",
+        "v1": "Revisa tu vehículo antes de iniciar tu viaje",
+        "v2": "Asignación de reporte de reparación a mecánico",
+        "v3": "Mecánico asegura el vehículo…",
         "v4": "Mecánico realiza el diagnóstico y reparación",
         "v5": "Entrega de vehículo",
         "v7": "Avanzar la unidad",
@@ -44,14 +44,16 @@
         
         "examen":{
             "exa1": "Elige cuál de estas escenas es la correcta.",
-            "exa2": "Da clic en la flecha derecha para continuar."
+            "exa2": "Da clic en la flecha derecha para continuar.",
+            "exa3": "Descendiste del vehículo, ¿cuál de estas dos imágenes es la correcta?",
+            "exa4": "Estas en proceso de salida a viaje, ¿cuál de estas dos imágenes es la correcta?"
         },
 
         "txtTrivia":{
             "instru1":"¿Hacer la revisión de tu vehículo te ayuda a...?",
             "instru2":"¿Asignar un nuevo trabajo de acuerdo a la disponibilidad de tiempo y habilidades adecuadas del mecánico ayuda a..?",
             "instru3":"¿Cuál es el procedimiento correcto para asegurar un vehículo en el taller?",
-            "instru4":"¿Por qué es importante mantener en resguardo las llaves del vehículo?",
+            "instru4":"¿Por qué es importante mantener en resguardo las llaves del vehículo en el bolsillo del pantalón del mecánico?",
             "instru5":"¿Cuál es el momento correcto para retirar los dispositivos de seguridad?",
             "btnConti":"Continuar"
         },
@@ -59,7 +61,7 @@
       "iconosTextos": {
         "icono1": "Prevenir accidentes hacia ti o terceros",
         "icono2": "Asegurarte que tu vehículo está en buenas condiciones y así tener un viaje seguro.",
-        "icono3": "Todas las anteriores",
+        "icono3": "Todas las demás",
         "icono4": "Casco y botas de seguridad",
         "icono5": "Guantes, googles, botas de seguridad, cubreboca y faja",
         "icono6": "Ejecutar con la calidad y oportunidad adecuada el trabajo asignado",
@@ -119,9 +121,9 @@
         "sup3d": "coloca la funda de protección en el volante,",
         "sup3e": "desciende de la unidad usando los tres puntos de apoyo, y",
         "sup3f": "coloca el bloqueador en la llanta delantera izquierda.",
-        "sup4a": "Por seguridad, solo el jefe de taller puede retirar la llave del gabinete asignado para su ubicación.",
+        "sup4a": "Por seguridad solo el mecánico debe mantener las laves en la bolsa de su pantalón.",
         "sup4b": "Realizar la reparación con calidad y en el tiempo adecuado contribuye a la eficiencia en la operación.",
-        "supspe": "Una buena práctica.",
+        "supspe":"Mecánico asegura la llave en la bolsa del pantalón",
         "sup5a": "No se deben retirar los elementos de seguridad (bloqueador y seguro de volante) hasta que la reparación de la unidad haya concluido.",
         "sup5b": "No se deberá usar la unidad hasta que el encargado de taller haya entregado el vehículo de manera formal al operador de transportes o movedor de patio."
       }

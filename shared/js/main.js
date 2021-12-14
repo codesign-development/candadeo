@@ -3,19 +3,15 @@ hackSlides()
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
+let count = 0;
+let malas = [];
 
 init()
 
 
 function init() {
-
-    $("#btn-finalizar").hide()
-
     //openFullscreen()
-
 }
-
-
 
 
 /* View in fullscreen */
@@ -64,6 +60,7 @@ var isLastSlide = false
 var chunkDataForLMS = ""
 var playingInFullScreen = false
 var isActiveLastSlide = false
+var lastId = "";
 
 function scrollToNextItem(e) {
 
@@ -74,81 +71,124 @@ function scrollToNextItem(e) {
     }
 
     var some = $(e).siblings("#content")
+    var idActual = "";
 
-    var idActual = some[0].children[counter].id;
+    if(lastId !== "despedida"){
+        idActual = some[0].children[counter].id;
+    }else{
+        idActual = lastId;
+    }
+        
     console.log(idActual);
+    console.log(counter,"flecha next")
 
+    if (idActual === "despedida"){
+        lastId = idActual;
+        if(malas.length > 0){
+            // currentSlide = malas[0]
+            // 
+            let retro = currentSlide - malas[0]
+            content.scrollBy({
+                left: -childWidth * retro,
+                top: 0,
+                behavior: 'auto'
+            })
+            currentSlide =  malas[0]
+            counter = malas[0]
+            prevScroll.classList.remove("noVes");
+            prevScroll.classList.add("siVes");
+            $(".exSig").css("display", "none");
+            $(".resReset").css("opacity", "100%");
+            // Oculta el icono y el color del examen cuando clickeas la flecha derecha
+            answerClear()
+            malas.shift()
+        }else{
     
-    //Comentar para productivo
-    /* if (idActual == "despedida") {
+            let retro = 11 - currentSlide;
+            content.scrollBy({
+                left: childWidth * retro,
+                top: 0,
+                behavior: 'auto'
+            });
 
-        if (!isActiveLastSlide) {
-            let SD = window.parent
-            let imported = document.createElement("script")
-            imported.src = "../scormdriver/auto-scripts/AutoCompleteSCO.js"
-            document.head.appendChild(imported)
-            SD.SetPassed()
-            isActiveLastSlide = true
+            $('#derArrow').removeClass("siVes")
+            $('#derArrow').addClass("noVes")
+            lastId = ""
+            counter = 11
+            currentSlide = 11
+            /* if (!isActiveLastSlide) {
+                let SD = window.parent
+                let imported = document.createElement("script")
+                imported.src = "../scormdriver/auto-scripts/AutoCompleteSCO.js"
+                document.head.appendChild(imported)
+                SD.SetPassed()
+                isActiveLastSlide = true
+            } */
+            
+
         }
-    } */
 
-    if (idActual.includes("video-cont") || idActual.includes("webgl") || idActual.includes("examen")) {
-        if ($("#" + idActual).hasClass("visto")) {
-            $('#derArrow').removeClass("unactive")
-            $('#derArrow').addClass("active")
-            console.log("visto")
-        } else if ($("#" + idActual).hasClass("noVisto")) {
-            $('#derArrow').removeClass("active")
-            $('#derArrow').addClass("unactive")
-            console.log("novisto")
+    }else{
+
+        if (idActual.includes("video-cont") || idActual.includes("examen")) {
+            if ($("#" + idActual).hasClass("visto")) {
+                $('#derArrow').removeClass("unactive")
+                $('#derArrow').addClass("active")
+            } else if ($("#" + idActual).hasClass("noVisto")) {
+                $('#derArrow').removeClass("active")
+                $('#derArrow').addClass("unactive")
+            }
         }
-    }
-
-    if (some[0].children[counter].id == "webgl") {
-        isPlayingWebGL = true
-        if (!$("#point-cont").hasClass("invisible")) {
-            $("#point-cont").addClass("invisible")
+    
+        if (idActual.includes("examen")) {
+            if (!$("#point-cont").hasClass("invisible")) {
+                $("#point-cont").addClass("invisible")
+            }
+        } else {
+            if ($("#point-cont").hasClass("invisible") && some[0].children[counter].id.includes("video")) {
+                $("#point-cont").removeClass("invisible")
+            }
         }
-    } else {
-        if ($("#point-cont").hasClass("invisible") && some[0].children[counter].id.includes("video")) {
-            $("#point-cont").removeClass("invisible")
-        }
-    }
-
-    counter += 1
-    if (content.scrollLeft < (content.scrollWidth - childWidth)) {
-
-        // The scroll position is not at the beginning of last item
-        content.scrollBy({
-            left: childWidth,
+    
+        counter += 1
+        if (content.scrollLeft < (content.scrollWidth - childWidth)) {
+            MoveSlide()
+        } else
+        // Last item reached. Go back to first item by setting scroll position to 0
+            content.scrollTo({
+            left: 0,
             top: 0,
             behavior: 'auto'
         });
-        prevScroll.classList.remove("noVes");
-        prevScroll.classList.add("siVes");
-        $(".exSig").css("display", "none");
-        $(".resReset").css("opacity", "100%");
+    
+        if (some[0].children[counter].id == "nulo" && ($(nextScroll).hasClass("siVes"))) {
+            nextScroll.classList.remove("siVes");
+            nextScroll.classList.add("noVes");
+            if (!$("#point-cont").hasClass("invisible")) {
+                $("#point-cont").addClass("invisible")
+            }
+        }
+    }
+}
 
-        // Oculta el icono y el color del examen cuando clickeas la flecha derecha
+function MoveSlide(){
 
-        answerClear()
-
-
-    } else
-    // Last item reached. Go back to first item by setting scroll position to 0
-        content.scrollTo({
-        left: 0,
+    // The scroll position is not at the beginning of last item
+    content.scrollBy({
+        left: childWidth,
         top: 0,
         behavior: 'auto'
     });
+    prevScroll.classList.remove("noVes");
+    prevScroll.classList.add("siVes");
+    $(".exSig").css("display", "none");
+    $(".resReset").css("opacity", "100%");
 
-    if (some[0].children[counter].id == "nulo" && ($(nextScroll).hasClass("siVes"))) {
-        nextScroll.classList.remove("siVes");
-        nextScroll.classList.add("noVes");
-        if (!$("#point-cont").hasClass("invisible")) {
-            $("#point-cont").addClass("invisible")
-        }
-    }
+    // Oculta el icono y el color del examen cuando clickeas la flecha derecha
+
+    answerClear()
+
+    
 }
 
 
@@ -176,7 +216,7 @@ function scrollToPrevItem(e) {
 
     var idActual = some[0].children[counter - 1].id;
     console.log(idActual);
-    if (idActual.includes("video-cont") || idActual.includes("webgl") || idActual.includes("examen")) {
+    if (idActual.includes("video-cont") || idActual.includes("examen")) {
 
         if ($("#" + idActual).hasClass("visto")) {
             $('#derArrow').removeClass("unactive")
@@ -223,32 +263,16 @@ let currentSlide = 1;
 
 // Active dots
 nextScroll.addEventListener('click', () => {
+
     bullets[currentSlide - 0].classList.add('checked');
-    currentSlide += 1;
+    
+    if(lastId !==  "despedida"){
+        currentSlide += 1;
+    }
     // prevScroll.disabled  =  false;
-    console.log(currentSlide)
+    console.log(currentSlide,"slide")
 });
 
-
-
-/* finalizar.addEventListener('click', () => {
-
-    
-    let SD = window.parent
-    let imported = document.createElement("script")
-    imported.src = "../scormdriver/auto-scripts/AutoCompleteSCO.js"
-    document.head.appendChild(imported)  
-
-
-    
-    SD.SetPassed()
-    setTimeout(() => {
-        close()
-    }, 200);
-
-    //Recarga el documento al inicio al detectar el último div nulo.
-    // document.location.reload();
-}); */
 
 // Unactive dots
 prevScroll.addEventListener('click', () => {
@@ -266,12 +290,19 @@ prevScroll.addEventListener('click', () => {
 /* function listenersEx(){
     examenRes.addEventListener('click', badRes)
 } */
-let count = 0;
+
 function badRes (e){
+
     if (e.target.classList.contains('exIncorrecto')){
         count++
         console.log(`slide:${currentSlide}`)
-       
+        $(".exCorrecto").css("pointer-events","none");
+        $(".exIncorrecto").css("pointer-events","none");
+        malas.push(currentSlide);
+        /* setTimeout(() => {
+            answerClear()
+            blockExamArrows()
+        }, 5000);  */
     }
     resetExamen()
 }
@@ -290,14 +321,15 @@ function resetExamen(){
 
         thirdStrike()
         retro = currentSlide-7
+
         content.scrollBy({
             left: -childWidth * retro,
             top: 0,
             behavior: 'auto'
         })
+
         console.log('reset examen')
         count = 0
-        console.log(retro);
         
 
         currentSlide = 7
@@ -306,6 +338,8 @@ function resetExamen(){
         answerClear()
         strikeReset()
         examCoolDown()
+        lastId= ""
+        malas = []
     }
 }
 
@@ -355,12 +389,15 @@ function answerAnim() {
 }
 
 function answerClear() {
-        $(".exCorrecto").css("transition","0s");
-        $(".exCorrecto").css("background-size","0%");
-        $(".exCorrecto").css("background-color","rgba(9, 139, 4, 0)");
-        $(".exIncorrecto").css("transition","0s");
-        $(".exIncorrecto").css("background-size","0%");
-        $(".exIncorrecto").css("background-color","rgba(184, 17, 5, 0)");
+    $(".exCorrecto").css("transition","0s");
+    $(".exCorrecto").css("background-size","0%");
+    $(".exCorrecto").css("background-color","rgba(9, 139, 4, 0)");
+    $(".exCorrecto").css("pointer-events","all");
+    $(".exIncorrecto").css("transition","0s");
+    $(".exIncorrecto").css("background-size","0%");
+    $(".exIncorrecto").css("background-color","rgba(184, 17, 5, 0)");
+    $(".exIncorrecto").css("pointer-events","all");
+    $(".exSiguiente").css("display", "none");
 }
 
  $(".res1").on("click", function(e) {
@@ -466,24 +503,28 @@ function shuffleElements(parent) {
 
 function good(){
     if ($(".icon").hasClass("good")){
-        $(".iconCont").css("background-color","rgba(0, 255, 0, 0.5)")
+        $(".trivia").css("background-color","rgba(0, 255, 0, 0.5)")
         $(".goodIcon").css("background-color","#6bc310")
         $(".badIcon").css("background-color","rgb(255, 0, 0)")
         $(".icon").css("pointer-events", "none")
         $(".btn-reset").addClass("refreshBlock")
-        showSuper()
+        $(".btn-next").addClass("nonCheck")
+        $(".btn-next").removeClass("check")
+        $(".btn-next").removeClass("d-none")
         audioGood()
     }
 }
 
 function bad() {
     if ($(".icon").hasClass("bad")){
-        $(".iconCont").css("background-color","rgba(255, 0, 0, 0.5)")
+        $(".trivia").css("background-color","rgba(255, 0, 0, 0.5)")
         $(".goodIcon").css("background-color","#6bc310")
         $(".badIcon").css("background-color","rgb(255, 0, 0)")
         $(".icon").css("pointer-events", "none")
         $(".btn-reset").addClass("refreshBlock")
-        showSuper()
+        $(".btn-next").addClass("nonCheck")
+        $(".btn-next").removeClass("check")
+        $(".btn-next").removeClass("d-none")
         audioBad()
     }
 }
@@ -492,27 +533,64 @@ function bad() {
 
 const continueVideo = (e) => {
 
-    let videoCurrent = $(e).siblings().siblings()
-    let temp = $(videoCurrent).children("video")
-    let temp2 = $(e).attr("data-seek")
-    let slideCurrent = $(e).parent()
-    temp[0].currentTime = temp2
-    temp[0].play()
-    slideCurrent.addClass("visto")
-    slideCurrent.removeClass("noVisto")
-    nextScroll.classList.remove("noVes");
-    nextScroll.classList.add("siVes");
-    $(".trivia").addClass("d-none")
-    $(e).addClass("d-none")
-    $(".goodIcon").css("background-color","#0c2999")
-    $(".badIcon").css("background-color","#0c2999")
-    $(".iconCont").css("background-color","")
-    $(".superWrap").addClass("d-none")
-    $(".btn-next").addClass("refreshBlock")
-    // $("#superVideo5").css("display","none")
-    $('#superVideoSpecial').css("display","none")
-    resetGameAlert ()
+    var iconShuffle = $(e).siblings()
+    var icon = iconShuffle[4].children[1]
     
+    if($(".btn-next").hasClass("check")){
+        $(".superWrap").addClass("d-none")
+        video.webkitExitFullscreen();
+        //Aparece triva
+        $(".trivia").removeClass("d-none")
+        //Shuffle a respuestas
+        switch (icon.id) {
+            case "iconCont1":
+                shuffleElements("#iconCont1")
+            break;
+            case "iconCont2":
+                shuffleElements("#iconCont2")
+            break;
+            case "iconCont3":
+                shuffleElements("#iconCont3")
+            break;
+            case "iconCont4":
+                shuffleElements("#iconCont4")
+            break;
+            case "iconCont5":
+                shuffleElements("#iconCont5")
+            break;
+        
+            default:
+            break;
+        }
+        //Reproduce audio Among Us
+        audioTrivia()
+        $(".btn-next").addClass("d-none")
+
+    }else if($(".btn-next").hasClass("nonCheck")){
+
+        let videoCurrent = $(e).siblings().siblings()
+        let temp = $(videoCurrent).children("video")
+        let temp2 = $(e).attr("data-seek")
+        let slideCurrent = $(e).parent()
+        temp[0].currentTime = temp2
+        temp[0].play()
+        slideCurrent.addClass("visto")
+        slideCurrent.removeClass("noVisto")
+        nextScroll.classList.remove("noVes");
+        nextScroll.classList.add("siVes");
+        $(".trivia").addClass("d-none")
+        $(e).addClass("d-none")
+        $(".goodIcon").css("background-color","#0c2999")
+        $(".badIcon").css("background-color","#0c2999")
+        $(".iconCont").css("background-color","")
+        $(".trivia").css("background-color","rgba(0,0,0,0)")
+        $(".btn-next").addClass("d-none")
+        $(".btn-next").addClass("refreshBlock")
+        $("#superVideoSpecial").css("display","none")
+        $(".btn-reset").removeClass("refreshBlock")
+        resetGameAlert ()
+    }
+
 }
 // Función resetTag
 
@@ -527,17 +605,20 @@ const resetVideo = (e) => {
     $(".badIcon").css("background-color","#0c2999")
     $(".iconCont").css("background-color","")
     $(".trivia").addClass("d-none")
+    $(".trivia").css("background-color","rgba(0,0,0,0)")
+    $(".superWrap").addClass("d-none")
     $(".btn-next").addClass("d-none")
     $(".btn-next").addClass("refreshBlock")
     $(".vidSig").css("display", "none")
     $(".vidBad").css("background-position", "0px")
     $(".vidGood").css("background-position", "0px")
     $(".icon").css("pointer-events", "all")
-    $(".superWrap").addClass("d-none")
     $('#superVideoSpecial').css("display","none")
-    $('.superSpecialWrap').css("display","none")
-    $('.superVideo').css("display","none")
+    $('.superSpecialWrap').addClass("d-none")
+    $('.supSpecials').addClass("d-none")
     $(".instruccion2").addClass("d-none")
+    $(".btn-next").removeClass("check")
+    $(".btn-next").removeClass("nonCheck")
     resetGameAlert ()
     
 }
@@ -584,6 +665,7 @@ function hackSlides(){
 
     setTimeout(function () {
         
+        $(".btn-next").addClass("check");
         $(".btn-next").removeClass("refreshBlock");
 
     }, 5000);

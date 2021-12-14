@@ -33,13 +33,7 @@ video.addEventListener('play', (event) => {
     if (event.target.currentTime >= 26 && event.target.currentTime <= 27) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       video.pause()
-      video.webkitExitFullscreen();
-      //Aparece triva
-      $(".trivia").removeClass("d-none")
-      //Shuffle a respuestas
-      shuffleElements("#iconCont1")
-      //Reproduce audio Among Us
-      audioTrivia()
+      showSuper()
     }
 
     //Escondido del super antes del final del video
@@ -48,20 +42,20 @@ video.addEventListener('play', (event) => {
     } */
 
     //Pausa cuando termine el video
-     if (event.target.currentTime >= 61 && event.target.currentTime <= 62) {
+     if (event.target.currentTime >= 60 && event.target.currentTime <= 61) {
        window.localStorage.setItem("currentTime", event.target.currentTime)
        video.pause()
        video.webkitExitFullscreen();
        //Overlay de siguiente
        $(".vidSig").css("display", "block")
-       //Oculta texto de apoyo
-       $(".superWrap").addClass("d-none")
        //Activa Flechas
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
        $('#izqArrow').addClass("active")
        //Oculta botones de continuar y reset
        $('.btn-next').addClass("d-none")
+       $(".btn-next").removeClass("check")
+       $(".btn-next").removeClass("nonCheck")
        $('.btn-reset').addClass("d-none")
        $(".icon").css("pointer-events", "all")
        $('#derArrow').addClass("active")
@@ -96,9 +90,7 @@ video.addEventListener('play', (event) => {
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoTwo.pause()
        videoTwo.webkitExitFullscreen();
-       $(".trivia").removeClass("d-none")
-       shuffleElements("#iconCont2")
-       audioTrivia()
+       showSuper();
      }
 
      /* //Escondido del super antes del final del video solo activar cuando se necesite
@@ -113,7 +105,6 @@ video.addEventListener('play', (event) => {
         videoTwo.pause()
         videoTwo.webkitExitFullscreen();
         $(".vidSig").css("display", "block")
-        $(".superWrap").addClass("d-none")
         $('#izqArrow').removeClass("unactive")
         $('#derArrow').removeClass("unactive")
         $('#izqArrow').addClass("active")
@@ -121,6 +112,9 @@ video.addEventListener('play', (event) => {
         $(".icon").css("pointer-events", "all")
         $('#derArrow').addClass("active")
         $('.btn-next').addClass("d-none")
+        $('.btn-next').addClass("refreshBlock")
+        $(".btn-next").removeClass("check")
+        $(".btn-next").removeClass("nonCheck")
         derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
         videoTwo.currentTime = 0
         videoTwo.load()
@@ -150,37 +144,41 @@ videoThree.addEventListener('play', (event) => {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoThree.pause()
       videoThree.webkitExitFullscreen();
-      $(".trivia").removeClass("d-none")
-      shuffleElements("#iconCont3")
-      audioTrivia()
+      showSuper();
     }
 
    //Escondido del super antes del final del video solo activar cuando se necesite
-    if (event.target.currentTime >= 58 && event.target.currentTime <= 59) {
+    /* if (event.target.currentTime >= 58 && event.target.currentTime <= 59) {
       $(".superWrap").addClass("d-none")
-    }
+    } */
 
     //Prendido del Super Especial
-    if (event.target.currentTime >= 60 && event.target.currentTime <= 61) {
+    if (event.target.currentTime >= 31 && event.target.currentTime <= 32) {
       $("#superVideoSpecial").css("display", "block")
     }
 
+    //Apagado del Super Especial
+    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
+      $("#superVideoSpecial").css("display", "none")
+    }
+
     //Pausa cuando termine el video
-     if (event.target.currentTime >= 70 && event.target.currentTime <= 71) {
+     if (event.target.currentTime >= 56 && event.target.currentTime <= 57) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoThree.pause()
        videoThree.webkitExitFullscreen();
        $(".vidSig").css("display", "block")
-       $(".superWrap").addClass("d-none")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
        $('#izqArrow').addClass("active")
        $('.btn-reset').addClass("d-none")
        $(".icon").css("pointer-events", "all")
-       $("#superVideoSpecial").css("display", "none")
        $('#derArrow').addClass("active")
        $('.btn-next').addClass("d-none")
+       $('.btn-next').addClass("refreshBlock")
+       $(".btn-next").removeClass("check")
+       $(".btn-next").removeClass("nonCheck")
        derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
        videoThree.currentTime = 0
        videoThree.load()
@@ -210,9 +208,7 @@ videoFour.addEventListener('play', (event) => {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoFour.pause()
       videoFour.webkitExitFullscreen();
-      $(".trivia").removeClass("d-none")
-      shuffleElements("#iconCont4")
-      audioTrivia()
+      showSuper();
     }
 
     //Escondido del super antes del final del video solo activar cuando se necesite
@@ -221,13 +217,12 @@ videoFour.addEventListener('play', (event) => {
     //} 
 
     //Pausa cuando termine el video
-     if (event.target.currentTime >= 59 && event.target.currentTime <= 60) {
+     if (event.target.currentTime >= 50 && event.target.currentTime <= 51) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoFour.pause()
        videoFour.webkitExitFullscreen();
        $(".vidSig").css("display", "block")
-       $(".superWrap").addClass("d-none")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
        $('#izqArrow').addClass("active")
@@ -235,6 +230,9 @@ videoFour.addEventListener('play', (event) => {
        $(".icon").css("pointer-events", "all")
        $('#derArrow').addClass("active")
        $('.btn-next').addClass("d-none")
+       $('.btn-next').addClass("refreshBlock")
+       $(".btn-next").removeClass("check")
+       $(".btn-next").removeClass("nonCheck")
        derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
        videoFour.currentTime = 0
        videoFour.load()
@@ -259,33 +257,30 @@ videoFive.addEventListener('play', (event) => {
   videoFive.addEventListener('timeupdate', (event) => {
 
 //     Pausa en reacción mala
-    if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
+    if (event.target.currentTime >= 34 && event.target.currentTime <= 35) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoFive.pause()
       videoFive.webkitExitFullscreen();
-      $(".trivia").removeClass("d-none")
-      shuffleElements("#iconCont5")
-      audioTrivia()
+      showSuper();
     }
 
    //Escondido del super antes del final del video solo activar cuando se necesite
-    if (event.target.currentTime >= 76 && event.target.currentTime <= 77) {
+    /* if (event.target.currentTime >= 76 && event.target.currentTime <= 77) {
       $(".superWrap").addClass("d-none")
-    }
+    } */
 
     //Mostrado del super asimetrico
-    if (event.target.currentTime >= 44 && event.target.currentTime <= 45) {
+    /* if (event.target.currentTime >= 44 && event.target.currentTime <= 45) {
       $(".superVideo").css("display", "block")
-    }
+    } */
 
     //Fin de video
-     if (event.target.currentTime >= 85 && event.target.currentTime <= 86) {
+     if (event.target.currentTime >= 69 && event.target.currentTime <= 70) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoFive.pause()
        videoFive.webkitExitFullscreen();
        $(".vidSig").css("display", "block")
-       $(".superWrap").addClass("d-none")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
        $('#izqArrow').addClass("active")
@@ -293,6 +288,9 @@ videoFive.addEventListener('play', (event) => {
        $(".icon").css("pointer-events", "all")
        $('#derArrow').addClass("active")
        $('.btn-next').addClass("d-none")
+       $('.btn-next').addClass("refreshBlock")
+       $(".btn-next").removeClass("check")
+       $(".btn-next").removeClass("nonCheck")
        derArrow.classList.add('animate__animated', 'animate__pulse', 'animate__repeat-3');
        videoFive.currentTime = 0
        videoFive.load()

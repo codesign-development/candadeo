@@ -297,10 +297,16 @@ function setData(data) {
 
     let exaText1 = $("<p>" + data.examen.exa1 + "</p>");
     let exaText2 = $("<p>" + data.examen.exa2 + "</p>");
+    let exaText3 = $("<p>" + data.examen.exa3 + "</p>");
+    let exaText4 = $("<p>" + data.examen.exa4 + "</p>");
 
     $(".exTitle").html("");
+    $(".exTitle1").html("");
+    $(".exTitle2").html("");
     $(".exSig").html("");
     $(".exTitle").append(exaText1);
+    $(".exTitle1").append(exaText4);
+    $(".exTitle2").append(exaText3);
     $(".exSig").append(exaText2);
 }
 
