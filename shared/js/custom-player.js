@@ -204,7 +204,7 @@ videoFour.addEventListener('play', (event) => {
   videoFour.addEventListener('timeupdate', (event) => {
 
 //     Pausa en reacción mala
-    if (event.target.currentTime >= 27 && event.target.currentTime <= 28) {
+    if (event.target.currentTime >= 13 && event.target.currentTime <= 14) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
       videoFour.pause()
       videoFour.webkitExitFullscreen();
@@ -217,7 +217,7 @@ videoFour.addEventListener('play', (event) => {
     //} 
 
     //Pausa cuando termine el video
-     if (event.target.currentTime >= 50 && event.target.currentTime <= 51) {
+     if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
        videoFour.pause()
