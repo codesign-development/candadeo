@@ -1,5 +1,5 @@
 scrollMobile()
-hackSlides()
+//hackSlides()
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
@@ -116,14 +116,20 @@ function scrollToNextItem(e) {
             lastId = ""
             counter = 11
             currentSlide = 11
-            /* if (!isActiveLastSlide) {
+            if (!isActiveLastSlide) {
                 let SD = window.parent
                 let imported = document.createElement("script")
                 imported.src = "../scormdriver/auto-scripts/AutoCompleteSCO.js"
                 document.head.appendChild(imported)
                 SD.SetPassed()
                 isActiveLastSlide = true
-            } */
+                setTimeout(() => {
+                    close()
+                }, 200);
+            
+                //Recarga el documento al inicio al detectar el último div nulo.
+                document.location.reload();
+            }
             
 
         }
