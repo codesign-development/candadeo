@@ -125,10 +125,10 @@ function scrollToNextItem(e) {
                 isActiveLastSlide = true
                 setTimeout(() => {
                     close()
-                }, 200);
+                }, 3000);
             
                 //Recarga el documento al inicio al detectar el último div nulo.
-                document.location.reload();
+                //document.location.reload();
             }
             
 
