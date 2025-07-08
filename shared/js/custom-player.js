@@ -12,7 +12,7 @@ const videoEleven = document.querySelector('#video_eleven>video');
 
 video.addEventListener('play', (event) => {
 
-  video.webkitExitFullscreen(); //Para salir de pantalla completa en iOS
+  // video.webkitExitFullscreen();
   video.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
@@ -32,7 +32,7 @@ video.addEventListener('play', (event) => {
     //Pausa en reacción mala alarma
     if (event.target.currentTime >= 26 && event.target.currentTime <= 27) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
-      video.pause()
+      exitFullScreenNPause( video )
       showSuper()
     }
 
@@ -44,8 +44,7 @@ video.addEventListener('play', (event) => {
     //Pausa cuando termine el video
      if (event.target.currentTime >= 60 && event.target.currentTime <= 61) {
        window.localStorage.setItem("currentTime", event.target.currentTime)
-       video.pause()
-       video.webkitExitFullscreen();
+       exitFullScreenNPause( video )
        //Overlay de siguiente
        $(".vidSig").css("display", "block")
        //Activa Flechas
@@ -71,8 +70,6 @@ video.addEventListener('play', (event) => {
 //video 2
  videoTwo.addEventListener('play', (event) => {
 
-   video.webkitExitFullscreen();
-   videoTwo.play()
    if (!$(".play-btn").hasClass("d-none")) {
      $(".play-btn").addClass("d-none")
    }
@@ -88,8 +85,7 @@ video.addEventListener('play', (event) => {
 //     Pausa en reacción mala
      if (event.target.currentTime >= 27 && event.target.currentTime <= 28) {
        window.localStorage.setItem("currentTime", event.target.currentTime)
-       videoTwo.pause()
-       videoTwo.webkitExitFullscreen();
+       exitFullScreenNPause( videoTwo )
        showSuper();
      }
 
@@ -102,8 +98,7 @@ video.addEventListener('play', (event) => {
       if (event.target.currentTime >= 56 && event.target.currentTime <= 57) {
         console.log("yes")
         window.localStorage.setItem("currentTime", event.target.currentTime)
-        videoTwo.pause()
-        videoTwo.webkitExitFullscreen();
+        exitFullScreenNPause( videoTwo )
         $(".vidSig").css("display", "block")
         $('#izqArrow').removeClass("unactive")
         $('#derArrow').removeClass("unactive")
@@ -125,8 +120,6 @@ video.addEventListener('play', (event) => {
 //Video Tres
 videoThree.addEventListener('play', (event) => {
 
-  video.webkitExitFullscreen();
-  videoThree.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
@@ -142,8 +135,7 @@ videoThree.addEventListener('play', (event) => {
 //     Pausa en reacción mala
     if (event.target.currentTime >= 19 && event.target.currentTime <= 20) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoThree.pause()
-      videoThree.webkitExitFullscreen();
+      exitFullScreenNPause( videoThree )
       showSuper();
     }
 
@@ -166,8 +158,7 @@ videoThree.addEventListener('play', (event) => {
      if (event.target.currentTime >= 56 && event.target.currentTime <= 57) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
-       videoThree.pause()
-       videoThree.webkitExitFullscreen();
+       exitFullScreenNPause( videoThree )
        $(".vidSig").css("display", "block")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
@@ -189,8 +180,6 @@ videoThree.addEventListener('play', (event) => {
 //Video 4
 videoFour.addEventListener('play', (event) => {
 
-  video.webkitExitFullscreen();
-  videoFour.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
@@ -206,8 +195,7 @@ videoFour.addEventListener('play', (event) => {
 //     Pausa en reacción mala
     if (event.target.currentTime >= 13 && event.target.currentTime <= 14) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoFour.pause()
-      videoFour.webkitExitFullscreen();
+      exitFullScreenNPause( videoFour )
       showSuper();
     }
 
@@ -220,8 +208,7 @@ videoFour.addEventListener('play', (event) => {
      if (event.target.currentTime >= 35 && event.target.currentTime <= 36) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
-       videoFour.pause()
-       videoFour.webkitExitFullscreen();
+       exitFullScreenNPause( videoFour )
        $(".vidSig").css("display", "block")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
@@ -243,8 +230,6 @@ videoFour.addEventListener('play', (event) => {
 //Video 5
 videoFive.addEventListener('play', (event) => {
 
-  video.webkitExitFullscreen();
-  videoFive.play()
   if (!$(".play-btn").hasClass("d-none")) {
     $(".play-btn").addClass("d-none")
   }
@@ -259,8 +244,7 @@ videoFive.addEventListener('play', (event) => {
 //     Pausa en reacción mala
     if (event.target.currentTime >= 34 && event.target.currentTime <= 35) {
       window.localStorage.setItem("currentTime", event.target.currentTime)
-      videoFive.pause()
-      videoFive.webkitExitFullscreen();
+      exitFullScreenNPause( videoFive )
       showSuper();
     }
 
@@ -278,8 +262,7 @@ videoFive.addEventListener('play', (event) => {
      if (event.target.currentTime >= 69 && event.target.currentTime <= 70) {
        console.log("yes")
        window.localStorage.setItem("currentTime", event.target.currentTime)
-       videoFive.pause()
-       videoFive.webkitExitFullscreen();
+       exitFullScreenNPause( videoFive )
        $(".vidSig").css("display", "block")
        $('#izqArrow').removeClass("unactive")
        $('#derArrow').removeClass("unactive")
@@ -309,4 +292,19 @@ const playBtn = (e) => {
     $(".play-btn").addClass("d-none")
   }
 
+}
+
+
+const exitFullScreenNPause =( video )=>{
+
+  if (document.fullscreenElement || document.webkitFullscreenElement) {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+  
+  video.pause();
+  
 }

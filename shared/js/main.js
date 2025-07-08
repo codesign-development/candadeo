@@ -117,11 +117,8 @@ function scrollToNextItem(e) {
             counter = 11
             currentSlide = 11
             if (!isActiveLastSlide) {
-                let SD = window.parent
-                let imported = document.createElement("script")
-                imported.src = "../scormdriver/auto-scripts/AutoCompleteSCO.js"
-                document.head.appendChild(imported)
-                SD.SetPassed()
+                
+                completeCourse()
                 isActiveLastSlide = true
                 setTimeout(() => {
                     close()
@@ -544,7 +541,7 @@ const continueVideo = (e) => {
     
     if($(".btn-next").hasClass("check")){
         $(".superWrap").addClass("d-none")
-        video.webkitExitFullscreen();
+        // video.webkitExitFullscreen();
         //Aparece triva
         $(".trivia").removeClass("d-none")
         //Shuffle a respuestas
@@ -675,4 +672,16 @@ function hackSlides(){
         $(".btn-next").removeClass("refreshBlock");
 
     }, 5000);
+}
+
+
+function completeCourse(){
+    let SD = window.parent
+    let imported = document.createElement("script")
+    imported.src = "../../scormdriver/auto-scripts/AutoCompleteSCO.js"
+    document.head.appendChild(imported)
+    console.log(SD);
+    console.log(imported);
+    SD.SetPassed()
+
 }
